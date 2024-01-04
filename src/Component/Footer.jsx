@@ -4,41 +4,41 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiTwitter } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa6"; 
+import AboutUs from "../routes/AboutUs"
 
 const Footer = () => {
   return (
     <>
-   
-        <div className="bg-black h-[0.01rem] mt-10"></div>
-      <div className="footer">
-            <div className="top flex justify-between mt-4">
-            <div className="text-4xl sm:text-5xl mx-2  flex">
-                <div className=" items-center ">
-                    <GiFleurDeLys />
-                </div>
-                <div>
-                    <div className="text-base  font-serif  mt-0 sm:mt-2">
-                        <span className="text-4xl  ">KD</span>
-                        <i className="text-xs md:text-base">jewellers</i>
-                    </div>
-                </div>
+     <div className='bg-red-500 h-[3px] mt-20'></div>
+        <div className="m-4 text-center">
+           
+                <h1 className='text-2xl font'>Subscribe for KD jewellrs</h1>
+                <p>Get E-mail of all the updates about our lastest and special offers</p>
+                <div className='mt-5'>
+                    <input type="text" placeholder='Email adddress...'name='Email' className='border border-black'> 
+                    </input>
+                    <button  onClick={() => alert("Cart not available yet")}
+                            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-sm">Subscribe
+                        </button>
+                
             </div>
-           
-           
-           
-            <button className="flex justify-between mt-3"
-                onClick={() => alert("search not available yet")}>
-             
-                <FaSquarePhone className="mt-1" /> 1800-4257331 
-             
-          </button>
-          <button className="mt-1"
-                onClick={() => alert("search not available yet")}>
-              <span>info@KDjewellers.net</span>
-          </button>
-
-        <div className="mt-4 mr-10 ">
-            <button className=""
+        </div>
+   
+        <div className="bg-black h-[0.01rem] mt-10 "></div>
+      <div className="footer sm:flex flex-col">
+            <div className="flex felx-col  text-base md:text-sm p-5 mx-4 font-serif justify-between">
+                <div className=" flex flex-col">
+                    <a href="/AboutUs" className="my-3">ABOUT US</a>
+                    <a>
+                    <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+                    </a>
+                    <a href="/">About Our Company</a>
+                    <a href="/">Privacy Policy</a>
+                    <a href="/">FAQ</a>
+                    <a href="/">Offerce T&Cs</a>
+                    <a href="/">Customer Reviews</a>
+                    <div>
+                    <button className=""
                 onClick={() => alert("search not available yet")}>
                 <IoLogoInstagram size={20} />
             </button>
@@ -49,35 +49,41 @@ const Footer = () => {
             <button className
                 onClick={() => alert("search not available yet")}>
                 <FaWhatsapp size={20}  />
-            </button>
-           
-        </div>
-     </div>
-
-
-            <div className="flex felx-col text-base p-5 mx-4 font-serif justify-between">
-                <div className=" flex flex-col">
-                    <a href="/About.jsx">ABOUT US</a>
-                    <a href="/">CONTACT US</a>
-                    <a href="/">STORE LOCATOR</a>
-                    <a href="/">THE KD PROMISE</a>
-                    <a href="/">BY INFORMED</a>
-                    <a href="/">FAQ</a>
-                    <a href="/">GOLD RATE TODAY</a>
-                    
+            </button>  
+                    </div>
                 </div>
                 <div className=" flex flex-col  ">
-                    <a href="/">CAREERS</a>
-                    <a href="/">EASY INSTALLEMENT PLAN</a>
-                    <a href="/">PARTNERING WITH TRUST</a>
-                    <a href="/">BLOG</a>
-                    <a href="/">WHY BUT FROM US</a>
-                    <a href="/">PRIVACY POLICY</a>
-                    <a href="/">TERMS AND CONDITIONS</a>
+                    <a href="/" className="my-3">WHY KD?</a> <a>
+                    <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+                    </a>
+                    <a href="/">15-Day Returns</a>
+                    <a href="/">Cancle & Refund</a>
+                    <a href="/">Lifetime Exchnage</a>
+                    <a href="/">Certified Jewellery</a>
+                    <a href="/">Candere Wallet</a>
+                    <a href="/">Jewellery Insurence</a>
+                    <a href="/">Liquiloans</a>
                 </div>
 
-                <div className="mx-24">
-                    <div>FEEDBACK</div>
+                <div className=" flex flex-col">
+                    <a href="/" className="my-3">CONTACT US</a>
+                    <a>
+                    <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+                    </a>
+                    <a href="/">India +91 22 61066262</a>
+                    <a href="/">(9am-9pm, 7 days a week)</a>
+                    <a href="/">Support@kd.com</a>
+                    <a href="/">KD store Locatore</a>
+                    <a href="/">FAQ</a>
+                    <a href="/">GOLD RATE TODAY</a> 
+         
+                </div>
+
+                <div className="">
+                    <div className="my-3">FEEDBACK</div>
+                    <a>
+                    <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+                    </a>
                     <div className='mt-5 flex flex-col '>
                         <a>
                     <input type="text" placeholder='Name'name='' className=' border-black'> 

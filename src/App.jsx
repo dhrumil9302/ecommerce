@@ -1,17 +1,23 @@
-import React from 'react'
-import Navbar from './Component/Navbar';
-import Hero from './Component/Hero'
-import Footer from './Component/Footer';
-import TopProducts from './Component/TopProducts'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Giftcard from "./routes/Giftcard";
+
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-    <Hero/>
-    <Footer/>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/giftcard" element={<Giftcard />} />
+      </Routes>
     </div>
-  )
+    // <>
+    // <Navbar/>
+    // <Hero/>
+    // <Footer/>
+    // </>
+  );
 }
 
-export default App
+export default App;

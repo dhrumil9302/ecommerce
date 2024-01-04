@@ -1,14 +1,16 @@
-import React from 'react'
-import Navbar from '../Component/Navbar';
-import Footer from '../Component/Footer';
+import React from "react";
+import Navbar from "../Component/Navbar";
+import Footer from "../Component/Footer";
+import Gift from "../Component/Gift";
 
-function Giftcard() {
+const Giftcard = () => {
   return (
     <div>
-    <Navbar/>
-    
-    <Footer/></div>
-  )
-}
+      <Navbar />
+      <Gift />
+      <Footer />
+    </div>
+  );
+};
 
-export default Giftcard
+export default Giftcard;

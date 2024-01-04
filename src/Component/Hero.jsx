@@ -12,6 +12,8 @@ import s5 from "../assets/slide5.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaIndianRupeeSign } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa6";
 
 
 
@@ -67,34 +69,47 @@ const Hero = () => {
                     <h2 className="text-3xl lg:text-3xl mt-2">JEWELLERY</h2>
                         <p className="text-[14px] md:text-[13px] lg:text-[14px] mt-2 mr-2">your love for diamonds meets our  promise to make them yours. Take home the the promise of a brighter tommorow. <br/> Paired to perfection .</p>
                         <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-sky-400 border-black px-6 py-[10px] rounded-full text-sm mt-2 lg:mt-3">Shop Now
+                            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5">Shop Now
                         </button>
             </div>
         </div>
         <div className='px-2 font-serif '>
-            <div className="lg:max-w-[1240px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4 md:max-lg:mt-[-100px] ">
+            <div className="lg:max-w-[1240px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4 md:max-lg:mt-[-100px]  ">
                 <div>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
+                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] hover:scale-105 duration-500 "/>
                         <div className="m-3">
+                        <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3> <FaRegHeart  className='m-1 ml-44'/></div>
                             <p className="text-base">New Design</p>
                                 <h1 className="text-xl  text-yellow-700 ">Small Design Rings</h1>
                                 <span>Sale 20% </span>
+                                <button  onClick={() => alert("Cart not available yet")}
+                            className="bg-amber-600 border-black px-4 py-[1.px] rounded-full mt-1 flex ">Buy
+                        </button>
                 </div>
+                
             </div>
             <div>
                 <img src={J3} alt="img" className="h-[15rem] w-[25rem] rounded-lg"/>
                     <div class="m-3">
+                    <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />12,000</h3> <FaRegHeart  className='m-1 ml-44'/></div>
                         <p className="text-base">Featured Product</p>
                         <h2  className="text-xl  text-yellow-700">Gold Earrings</h2>
                         <span>Sale 10% </span>
+                        <button  onClick={() => alert("Cart not available yet")}
+                            className="bg-amber-600 border-black px-4 py-[1.px] rounded-full mt-1 flex ">Buy
+                        </button>
                     </div>
             </div>
             <div>
                 <img src={J4} alt="img" className="h-[15rem] w-[25rem] rounded-lg"/>
                 <div class="m-3">
+                <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />27,000</h3> <FaRegHeart  className='m-1 ml-44 '/></div>
                                     <p className="text-base">Bestselling  </p>
                                     <h2  className="text-xl text-yellow-700 ">Gold Chain</h2>
                                     <span>Sale 30% </span>
+                                    <button  onClick={() => alert("Cart not available yet")}
+                            className="bg-amber-600 border-black px-4 py-[1.px] rounded-full mt-1 flex ">Buy
+                        </button>
                                 </div>
             </div>
         </div>
@@ -104,14 +119,14 @@ const Hero = () => {
         <div className=" bg-slate-300 h-[18rem] w-[90.5%] ml-12 rounded-lg">
             <div className='flex'>
                 <img src={P2} alt="" className="w-64 h-64"/>
-                    <h1 className="font-serif text-5xl text-gray-500 text-center  p-24">WE MAKE YOU <br/>FEEL SPECIAL </h1>
+                    <h1 className="font-serif text-5xl md:text-4xl text-gray-500 text-center  p-24 md:p-20">WE MAKE YOU <br/>FEEL SPECIAL </h1>
                         {/* <img src={P1} alt="" className="w-[17rem] h-[14rem]"/> */}
             </div> 
         </div>
 
   
         <div class="flex items-center py-4 mt-10">
-            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16">ABOUT US</span>
+            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16 md:text-3xl">ABOUT US</span>
             <div class="flex-grow h-px bg-gray-400"></div>
         </div>
         <div  className="text-base mx-16">
@@ -126,7 +141,7 @@ const Hero = () => {
 
         <div class="flex items-center py-4 mt-10">
         <div class="flex-grow h-px bg-gray-400"></div>
-            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16">KD UPDATES</span>
+            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16 md:text-3xl">KD UPDATES</span>
         </div>
         <div className="w-3/4 m-auto">
             <div className="mt-10  ">
@@ -137,7 +152,7 @@ const Hero = () => {
                             <img src={d.img} className='h-72 w-72 rounded-xl'/>
                             
                         </div >
-                        <div className='flex flex-col justify-center items-center  gap-4 p-4 '>
+                        <div className='flex flex-col justify-center items-center  gap-4 p-4 md:p-1 gap-2 '>
                             <h4 className="text-xl font-serif">{d.name}</h4>
                             <p className=''>{d.review}</p>
                             <button className='bg-slate-700 w-20 rounded-full text-white '>Buy Now</button>
@@ -149,20 +164,7 @@ const Hero = () => {
 
         </div>
 
-        <div className='bg-red-500 h-[3px] mt-20'></div>
-        <div className="m-4 text-center">
-           
-                <h1 className='text-2xl font'>Subscribe for KD jewellrs</h1>
-                <p>Get E-mail of all the updates about our lastest and special offers</p>
-                <div className='mt-5'>
-                    <input type="text" placeholder='Email adddress...'name='Email' className='border border-black'> 
-                    </input>
-                    <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-sm">Subscribe
-                        </button>
-                
-            </div>
-        </div>
+       
 
         
         
