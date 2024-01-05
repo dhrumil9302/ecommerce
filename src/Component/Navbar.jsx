@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
 import { GiFleurDeLys } from "react-icons/gi";
@@ -8,6 +8,9 @@ import { FaCaretRight } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import J1 from "../assets/j1.jpg";
 import Hero from "./Hero";
+import { FaBars } from "react-icons/fa";
+
+import { FaTimes } from "react-icons/fa";
 // import  DropdownLinks from "react-dropdown";
 
 const Menu1 = [
@@ -26,9 +29,7 @@ const Menu1 = [
     name: "Offers",
     link: "/",
   },
-
 ];
-
 const DropdownLink = [
   {
     id: 1,
@@ -92,7 +93,7 @@ const Subtitle1 = [
     name: "Solitaire",
     link: "/#",
   },
-]
+];
 const Subtitle2 = [
   {
     id: 1,
@@ -119,7 +120,7 @@ const Subtitle2 = [
     name: "Solitraine",
     link: "/#",
   },
-]
+];
 const Subtitle3 = [
   {
     id: 1,
@@ -151,7 +152,7 @@ const Subtitle3 = [
     name: "Pandant Nacklace",
     link: "/#",
   },
-]
+];
 const Subtitle4 = [
   {
     id: 1,
@@ -193,7 +194,7 @@ const Subtitle4 = [
     name: "Tennis Bracelets",
     link: "/#",
   },
-]
+];
 const Subtitle5 = [
   {
     id: 1,
@@ -215,45 +216,47 @@ const Subtitle5 = [
     name: "Simple Chain",
     link: "/#",
   },
-]
+];
 const Subtitle = [
   {
-    id: Subtitle1
-  }
-]
-
+    id: Subtitle1,
+  },
+];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <div>
-        <div className="shadow-md w-full">
+        <div className="shadow-md w-full ">
           <div className=" bg-white dark:bg-gray-900 dark:text-white ">
-            <div className="text-4xl sm:text-5xl mx-2  flex  ">
-              <div className=" items-center ">
-                <GiFleurDeLys />
-              </div>
-              <div>
-                <div className="text-base  font-serif  mt-0 sm:mt-2">
-                  <span className="text-4xl  ">KD</span>
-                  <i className="text-xs md:text-base">jewellers</i>
-                  {/* <p className="text-xs md:text-base ">
-              <span>Our Jewellery ... Your Style ...</span>
-              </p> */}
+            <div className="flex justify-between">
+              <div className="text-4xl sm:text-5xl mx-2  flex  ">
+                <div className=" items-center ">
+                  <GiFleurDeLys />
+                </div>
+                <div>
+                  <div className="text-base  font-serif  mt-0 sm:mt-2">
+                    <span className="text-4xl  ">KD</span>
+                    <i className="text-xs md:text-base">jewellers</i>
+                  </div>
                 </div>
               </div>
-              <div className="ml-[22%] mr-[3%] sm:ml-[53%] mr-[5%]  md:ml-[55%] mr-[5%] lg:ml-[65%] mr-[5%] flex">
-               
+              <div className="flex  ">
                 <button
                   onClick={() => alert(" not available yet")}
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block ">
+                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
+                >
                   <span className="transition-all duration-200">
                     <IoMdSearch className="size-3 " />
                   </span>
                 </button>
                 <button
                   onClick={() => alert(" not available yet")}
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
                     <IoPerson className="size-3" />
@@ -261,59 +264,36 @@ const Navbar = () => {
                 </button>
                 <button
                   onClick={() => alert(" not available yet")}
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full ">
+                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
+                >
                   <span className="transition-all duration-200">
-                  <FaRegHeart className="size-3" />
+                    <FaRegHeart className="size-3" />
                   </span>
                 </button>
                 <button
                   onClick={() => alert("Cart not available yet")}
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black h-6 mt-3 m-0.5 px-1 md:px-2  rounded-full"
+                  className="bg-white border border-slate-500 transition-all duration-200 text-black h-6 mt-3 m-0.5 px-1 md:px-2  rounded-full hidden sm:block"
                 >
                   <span className="transition-all duration-200">
                     <IoMdCart className="size-3" />
                   </span>
                 </button>
               </div>
+              <div className="sm:hidden m-2 ">
+                <button onClick={toggleMenu}>
+                  {isMenuOpen ? (
+                    <FaTimes className="w-5 h-5 text-white" />
+                  ) : (
+                    <FaBars className="w-5 h-5 text-white" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 
           <div className="flex justify-center font-serif shadow-xl">
-            <ul className="sm:flex hidden items-center gap-4">
-              {/* {
-              Menu.map((data) =>(
-                <li key={data.id} >
-                  <a href={data.link} className="inline-block px-4 hover:text-orange-500 duration-200">
-                    {data.name}
-                 </a>
-                </li>
-              ))
-            } */}
-              <li className="group relative cursor-pointer">
-                <a
-                  href="/"
-                  className="inline-block px-4 hover:text-orange-500 duration-200"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="group relative cursor-pointer">
-                <a
-                  href="#"
-                  className="flex items-center gap-[2px] py-2  hover:text-orange-500 ">
-                  Today's Rate
-                  {/* <span>
-                    <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-                  </span> */}
-                </a>
-               
-                <div className=" absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
-                  <ul>
-                    <a>Today's Gold Rate</a>
-                    </ul>
-                    </div>
-              </li>
-
+            <ul className="sm:flex items-center gap-4 hidden">
+              
               <li className="group relative cursor-pointer ml-2">
                 <a
                   href="#"
@@ -324,7 +304,7 @@ const Navbar = () => {
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </a>
-               
+
                 <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md">
                   <ul>
                     {DropdownLink.map((data) => (
@@ -353,19 +333,77 @@ const Navbar = () => {
                       </li>
                     ))}
                   </ul>
-                </div>                
+                </div>
               </li>
 
-              {Menu1.map((data) =>(
-                <li key={data.id} >
-                  <a href={data.link} className="inline-block px-4 hover:text-orange-500 duration-200">
+              {Menu1.map((data) => (
+                <li key={data.id}>
+                  <a
+                    href={data.link}
+                    className="inline-block px-4 hover:text-orange-500 duration-200"
+                  >
                     {data.name}
-                 </a>
+                  </a>
                 </li>
               ))}
-              
             </ul>
           </div>
+          <div>
+        <ul className={`bg-white text-black px-4 py-2 lg:hidden font-serif ${isMenuOpen ? "" : "hidden"}`}>
+           <li className="group relative cursor-pointer ml-4">
+                <a
+                  href="#"
+                  className="flex items-center gap-[2px]   hover:text-orange-500 "
+                >
+                  Jewellery
+                  <span>
+                    <FaCaretRight className="transition-all duration-200 group-hover:rotate-180" />
+                  </span>
+                </a>
+
+                <div className="  z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black ">
+                  <ul>
+                    {DropdownLink.map((data) => (
+                      <li key={data.id}>
+                        <a
+                          href={data.link}
+                          className="group/{jewellery}   w-full rounded-md p-2 flex "
+                        >
+                          {data.name}
+                          <span>
+                            <FaCaretRight className="transition-all duration-200 mt-1  " />
+                          </span>
+
+                          <ul className="  z-[9999] w-full rounded-md p-2 hidden group-hover/{jewellery}:block hover:bg-primary/20">
+                            {Subtitle1.map((data) => (
+                              <li key={data.id}>
+                                <a
+                                  href={data.link}
+                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20">
+                                  {data.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+        {Menu1.map((data) => (
+                <li key={data.id}>
+                  <a
+                    href={data.link}
+                    className="inline-block px-4 hover:text-orange-500 duration-200"
+                  >
+                    {data.name}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </div>
+
         </div>
       </div>
     </>

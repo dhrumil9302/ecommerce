@@ -32,132 +32,8 @@ const Gift = () => {
                       </div>
                 </div>
             </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div5 className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div5>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>      
-            <div className='border border-black-1 hover:scale-105 duration-500 rounded-2xl'>
-                <FaRegHeart  className='m-2 '/>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] "/>
-                        <div className=" bg-slate-200 rounded-b-xl">
-                            <div className='ml-4'>
-                             <p className="text-base">New Design</p>
-                             <h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3>
-                                <h1 className="text-base  text-yellow-700  ">Small Design Rings</h1>
-                                <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-black   text-white mb-4 px-5 py-[5px] rounded-full text-sm mt-2 lg:mt-3">Buy Now
-                        </button>
-                      </div>
-                </div>
-            </div>           
+                 
+                 
         </div>
         </div>
      
@@ -165,5 +41,7 @@ const Gift = () => {
     </>
   )
 }
+
+
 
 export default Gift

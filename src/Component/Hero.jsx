@@ -21,17 +21,17 @@ const data = [
     {
         name: "Couple Ring",
         img: s1,
-        review: "By KD/ 5 November,2023",
+        review: "By KD/ 5November,2023",
     },
     {
         name: "Braclete",
         img: s2,
-        review: "By KD/ 2  December,2023",
+        review: "By KD/ 2December,2023",
     },
     {
         name: "Pendant For Engagemenet",
         img: s3,
-        review: "By KD/ 17 December,2023",
+        review: "By KD/ 17December,2023",
     },
     {
         name: "Earring",
@@ -41,7 +41,7 @@ const data = [
     {
         name: "Simple Gold chian with Pandent",
         img: s5,
-        review: "By KD/ 1 January,2024",
+        review: "By KD/ 1January,2024",
     },
 ]
    
@@ -58,13 +58,13 @@ const Hero = () => {
         slidesToScroll: 1
     }
   return (
-    <div>
+    <div className='px-2'>
         
-        <div className="flex justify-between md:mt-10 lg:mt-10 mb-3 w-full  flex-col sm:flex-row md:flex-row lg:flex-row">
-            <div className="w-1/1.5 h-96 mt-5 ">
-                <img src={J1} alt="image" className=" w-[18rem] h-62 md:w-[40rem] md:h-64  lg:w-[1150px]  lg:h-[360px] ml-4 min-[425px]:w-[24.50rem] min-[375px]:w-[21.50rem] rounded-lg"/>
+        <div className="flex justify-between md:mt-10 lg:mt-10 mb-3 w-full  flex-col md:flex-row">
+            <div className="w-1/1.5 mt-5 ">
+                <img src={J1} alt="image" className=" w-11/12 h-62 md:w-[40rem] md:h-64  lg:w-[1150px]  lg:h-[360px] xl:w-[1600px] xl:h-[400px] mx-auto my-4 rounded-lg"/>
             </div>
-            <div className="ml-14 lg:ml-14 md:mt-11 lg:mt-20 md:w-1/2 lg:w-1/2  min-[425px]:mt-[-80px] min-[375px]:mt-[-130px] mt-[-180px]">
+            <div className="mx-10 lg:ml-14 md:mt-11 lg:mt-20 md:w-1/2 lg:w-1/2  xl:mt-[130px]">
                 <h6 className="text-base lg:text-xl">--- New Collection ---</h6>
                     <h2 className="text-3xl lg:text-3xl mt-2">JEWELLERY</h2>
                         <p className="text-[14px] md:text-[13px] lg:text-[14px] mt-2 mr-2">your love for diamonds meets our  promise to make them yours. Take home the the promise of a brighter tommorow. <br/> Paired to perfection .</p>
@@ -74,9 +74,9 @@ const Hero = () => {
             </div>
         </div>
         <div className='px-2 font-serif '>
-            <div className="lg:max-w-[1240px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4 md:max-lg:mt-[-100px]  ">
+            <div className="lg:max-w-[1240px] xl:max-w-[1350px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4  xl:mt-[40px]  ">
                 <div>
-                    <img src={J2} alt="img" className="h-[18rem]  w-[25rem] lg:h-[15rem] rounded-lg  max-[768px]:h-[15rem] hover:scale-105 duration-500 "/>
+                    <img src={J2} alt="img" className="h-[15rem]  w-full xl:h-[20rem] rounded-lg  hover:scale-105 duration-500 "/>
                         <div className="m-3">
                         <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />20,000</h3> <FaRegHeart  className='m-1 ml-44'/></div>
                             <p className="text-base">New Design</p>
@@ -89,7 +89,7 @@ const Hero = () => {
                 
             </div>
             <div>
-                <img src={J3} alt="img" className="h-[15rem] w-[25rem] rounded-lg"/>
+                <img src={J3} alt="img" className="h-[15rem] w-full  xl:h-[20rem] rounded-lg"/>
                     <div class="m-3">
                     <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />12,000</h3> <FaRegHeart  className='m-1 ml-44'/></div>
                         <p className="text-base">Featured Product</p>
@@ -101,7 +101,7 @@ const Hero = () => {
                     </div>
             </div>
             <div>
-                <img src={J4} alt="img" className="h-[15rem] w-[25rem] rounded-lg"/>
+                <img src={J4} alt="img" className="h-[15rem] w-full  xl:h-[20rem] rounded-lg"/>
                 <div class="m-3">
                 <div className='flex flex-row '><h3 className='flex '><FaIndianRupeeSign className='mt-1' />27,000</h3> <FaRegHeart  className='m-1 ml-44 '/></div>
                                     <p className="text-base">Bestselling  </p>
@@ -116,40 +116,40 @@ const Hero = () => {
         </div>
 
      
-        <div className=" bg-slate-300 h-[18rem] w-[90.5%] ml-12 rounded-lg">
+        <div className=" bg-slate-300 h-[17rem] w-full   lg:h-[20%] lg:w-full rounded-lg">
             <div className='flex'>
                 <img src={P2} alt="" className="w-64 h-64"/>
-                    <h1 className="font-serif text-5xl md:text-4xl text-gray-500 text-center  p-24 md:p-20">WE MAKE YOU <br/>FEEL SPECIAL </h1>
+                    <h1 className="font-serif text-4xl md:text-4xl md:right-24  text-gray-500 text-center relative right-44 lg:right-1 top-5 md:p-20">WE MAKE YOU <br/>FEEL SPECIAL </h1>
                         {/* <img src={P1} alt="" className="w-[17rem] h-[14rem]"/> */}
             </div> 
         </div>
 
   
         <div class="flex items-center py-4 mt-10">
-            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16 md:text-3xl">ABOUT US</span>
+            <span class="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10 md:text-3xl lg:text-4xl">ABOUT US</span>
             <div class="flex-grow h-px bg-gray-400"></div>
         </div>
-        <div  className="text-base mx-16">
+        <div  className=" text-sm lg:text-base lg:mx-16 mx-10">
             <p >We are one of the oldest business families in India with a family legacy of 112 years in business. Started for the noble cause of nation-building and self-sustenance in a pre-independent India, the forefathers believed ethical, honest and transparent business practices should form the foundation of the group.</p>
             <p className='mt-8'>Having ventured into jewellery retailing in 1993 in Thrissur, Kerala, India, where we are headquartered, and as on June 30, 2020, we have 137 showrooms spread across India and GCC</p>
         </div>
         <button  onClick={() => alert("Cart not available yet")}
-                            className="bg-gray-400  border-black px-6 py-[10px] rounded-full text-sm mt-8 ml-16">Read More..
+                            className="bg-gray-400  border-black px-2 py-[2px] lg:px-6 lg:py-[10px] rounded-full text-sxs lg:text-sm lg:mt-8 mt-4 ml-10 lg:ml-16">Read More..
         </button>
 
             
 
         <div class="flex items-center py-4 mt-10">
         <div class="flex-grow h-px bg-gray-400"></div>
-            <span class="flex-shrink text-4xl text-gray-500  font-serif mx-16 md:text-3xl">KD UPDATES</span>
+            <span class="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10  md:text-3xl lg:text-4xl">KD UPDATES</span>
         </div>
         <div className="w-3/4 m-auto">
-            <div className="mt-10  ">
+            <div className="mt-6 lg:mt-10  ">
                 <Slider {...settings}>
                 {data.map((d) =>(
-                    <div className="h-[450px] text-black rounded-lg  bg-gray-200 mb-5 ">
-                        <div className=' h-80 bg-gray-200  rounded-xl flex justify-center items-center '>
-                            <img src={d.img} className='h-72 w-72 rounded-xl'/>
+                    <div className="h-[400px] sm:h-[450px] text-black rounded-lg  bg-gray-200  ">
+                        <div className=' h-60 lg:h-80 md:h-80 bg-gray-200  rounded-xl flex justify-center items-center '>
+                            <img src={d.img} className='h-44 w-44  md:h-64 md:w-64 lg:w-72 lg:h-72 rounded-xl'/>
                             
                         </div >
                         <div className='flex flex-col justify-center items-center  gap-4 p-4 md:p-1 gap-2 '>
