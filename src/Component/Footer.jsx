@@ -8,9 +8,9 @@ import AboutUs from "../routes/AboutUs";
 
 const Footer = () => {
   return (
-    <>
-      <div className="bg-red-500 h-[3px] mt-20"></div>
-      <div className="m-4 text-center">
+    <div>
+      <div className="bg-red-500 h-[3px] mt-20 "></div>
+      <div className="m-4 text-center ">
         <h1 className="text-2xl font">Subscribe for KD jewellrs</h1>
         <p>
           Get E-mail of all the updates about our lastest and special offers
@@ -141,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

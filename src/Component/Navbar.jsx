@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { IoMdCart } from "react-icons/io";
 import { GiFleurDeLys } from "react-icons/gi";
 import { IoPerson } from "react-icons/io5";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretDown, FaSnapchat } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import J1 from "../assets/j1.jpg";
@@ -14,16 +14,18 @@ import { FaTimes } from "react-icons/fa";
 // import  DropdownLinks from "react-dropdown";
 
 const Menu1 = [
+  
   {
+    id: 1,
+    name: "Others",
+    link: "/others",
+  },
+{
     id: 2,
     name: "Gift Card",
     link: "/giftcard",
   },
-  {
-    id: 3,
-    name: "Our Brands",
-    link: "/#",
-  },
+
   {
     id: 4,
     name: "Offers",
@@ -228,6 +230,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+ 
   return (
     <>
       <div>
@@ -245,39 +248,44 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex  ">
-                <button
-                  onClick={() => alert(" not available yet")}
+              <div className="flex mr-2 ">
+                <a
+                  href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
-                    <IoMdSearch className="size-3 " />
+                    <IoMdSearch className="size-3 mt-1" />
                   </span>
-                </button>
-                <button
-                  onClick={() => alert(" not available yet")}
+                </a>
+                <a
+                  href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
-                    <IoPerson className="size-3" />
+                    <IoPerson className="size-3 mt-1" />
                   </span>
-                </button>
-                <button
-                  onClick={() => alert(" not available yet")}
+                </a>
+                <a
+                  href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
-                    <FaRegHeart className="size-3" />
+                    <FaRegHeart className="size-3 mt-1" />
                   </span>
-                </button>
-                <button
-                  onClick={() => alert("Cart not available yet")}
+                </a>
+                <a
+                  href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black h-6 mt-3 m-0.5 px-1 md:px-2  rounded-full hidden sm:block"
                 >
-                  <span className="transition-all duration-200">
-                    <IoMdCart className="size-3" />
-                  </span>
-                </button>
+                  <div className="transition-all duration-200 relative" >
+                    <IoMdCart className="size-3 mt-1" />
+                   
+                    <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute -top-3  left-2 text-center leading-5">
+                      0
+                    </span>
+                 
+                     </div>
+                </a>
               </div>
               <div className="sm:hidden m-2 ">
                 <button onClick={toggleMenu}>
@@ -293,7 +301,6 @@ const Navbar = () => {
 
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
-              
               <li className="group relative cursor-pointer ml-2">
                 <a
                   href="#"
@@ -323,7 +330,8 @@ const Navbar = () => {
                               <li key={data.id}>
                                 <a
                                   href={data.link}
-                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20">
+                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20"
+                                >
                                   {data.name}
                                 </a>
                               </li>
@@ -349,8 +357,50 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-        <ul className={`bg-white text-black px-4 py-2 lg:hidden font-serif ${isMenuOpen ? "" : "hidden"}`}>
-           <li className="group relative cursor-pointer ml-4">
+            <ul
+              className={`bg-white text-black px-4 py-2 lg:hidden font-serif ${
+                isMenuOpen ? "" : "hidden"
+              }`}
+            >
+              <div>
+                <div className=" mx-4 flex">
+                  <a
+                    href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoMdSearch className="size-3 mt-1 " />
+                    </span>
+                  </a>
+                  <a
+                    href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoPerson className="size-3 mt-1" />
+                    </span>
+                  </a>
+                  <a
+                      href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+                  >
+                    <span className="transition-all duration-200">
+                      <FaRegHeart className="size-3 mt-1" />
+                    </span>
+                  </a>
+                  <a
+                    href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoMdCart className="size-3 mt-1" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-black h-[0.01rem] m-2 "></div>
+              <li className="group relative cursor-pointer ml-4">
                 <a
                   href="#"
                   className="flex items-center gap-[2px]   hover:text-orange-500 "
@@ -379,7 +429,8 @@ const Navbar = () => {
                               <li key={data.id}>
                                 <a
                                   href={data.link}
-                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20">
+                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20"
+                                >
                                   {data.name}
                                 </a>
                               </li>
@@ -391,7 +442,7 @@ const Navbar = () => {
                   </ul>
                 </div>
               </li>
-        {Menu1.map((data) => (
+              {Menu1.map((data) => (
                 <li key={data.id}>
                   <a
                     href={data.link}
@@ -401,9 +452,8 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-          </ul>
-        </div>
-
+            </ul>
+          </div>
         </div>
       </div>
     </>
