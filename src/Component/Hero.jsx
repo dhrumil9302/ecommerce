@@ -1,7 +1,7 @@
 import React from "react";
 import J1 from "../assets/j1.jpg";
 import J2 from "../assets/C4.jpg";
-import J3 from "../assets/card1.jpg";
+import J3 from "../assets/slide4.jpg";
 import J4 from "../assets/card2.jpg";
 import P2 from "../assets/p2.png";
 import s1 from "../assets/slide8.jpg";
@@ -26,26 +26,31 @@ import { FaRegHeart } from "react-icons/fa6";
 
 const data = [
   {
+    id: 1,
     name: "Couple Ring",
     img: s1,
     review: "By KD/ 5November,2023",
   },
   {
+    id: 2,
     name: "Braclete",
     img: s2,
     review: "By KD/ 2December,2023",
   },
   {
+    id: 3,
     name: "Pendant For Engagemenet",
     img: s3,
     review: "By KD/ 17December,2023",
   },
   {
+    id: 4,
     name: "Earring",
     img: s4,
     review: "By KD/ 29Novermber,2023",
   },
   {
+    id: 5,
     name: "Simple Gold chian with Pandent",
     img: s5,
     review: "By KD/ 1January,2024",
@@ -80,31 +85,31 @@ const Hero = () => {
             home the the promise of a brighter tommorow. <br /> Paired to
             perfection .
           </p>
-          <button
-            onClick={() => alert("Cart not available yet")}
+          <a
+            href="/Product"
             className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5"
           >
             Shop Now
-          </button>
+          </a>
         </div>
       </div>
 
       <marquee className=" bg-gray-900 w-full h-36 rounded-lg mt-4">
         <div className="flex gap-6 my-3">
-          <img src={Brand} alt="img"  className="w-36 "/>
-          <img src={Brand1} alt="img"  className="w-36"/>
-          <img src={Brand2} alt="img"  className="w-36"/>
-          <img src={Brand3} alt="img"  className="w-36"/>
-     
-          <img src={Brand5} alt="img"  className="w-36"/>
-          <img src={Brand6} alt="img"  className="w-36"/>
-          <img src={Brand7} alt="img"  className="w-36"/>
-          <img src={Brand8} alt="img"  className="w-36"/>
+          <img src={Brand} alt="img" className="w-36 " />
+          <img src={Brand1} alt="img" className="w-36" />
+          <img src={Brand2} alt="img" className="w-36" />
+          <img src={Brand3} alt="img" className="w-36" />
+
+          <img src={Brand5} alt="img" className="w-36" />
+          <img src={Brand6} alt="img" className="w-36" />
+          <img src={Brand7} alt="img" className="w-36" />
+          <img src={Brand8} alt="img" className="w-36" />
         </div>
       </marquee>
 
       <div className="px-2 font-serif ">
-        <div className="lg:max-w-[1240px] xl:max-w-[1350px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4  xl:mt-[40px]  ">
+        <div className="lg:max-w-[1240px] xl:max-w-[1350px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4  xl:mt-[40px] xl:mx-36 ">
           <div>
             <img
               src={J2}
@@ -112,32 +117,30 @@ const Hero = () => {
               className="h-[15rem]  w-full xl:h-[20rem] rounded-lg  hover:scale-105 duration-500 "
             />
             <div className="m-3">
-            <FaRegHeart className="m-1 " />
-              <div className="flex flex-row ">
+              <FaRegHeart className="m-1 " />
+              <div className="px-2 font-serif">
                 <h3 className="flex ">
                   <FaIndianRupeeSign className="mt-1" />
                   20,000
                 </h3>{" "}
-                
               </div>
               <p className="text-base">New Design</p>
               <h1 className="text-xl  text-yellow-700 ">Small Design Rings</h1>
               <span>Sale 20% </span>
               <div className="flex gap-1">
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Add to Cart
-              </a>
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Buy
-              </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Add to Cart
+                </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Buy
+                </a>
               </div>
-              
             </div>
           </div>
           <div>
@@ -146,31 +149,30 @@ const Hero = () => {
               alt="img"
               className="h-[15rem] w-full  xl:h-[20rem] rounded-lg  hover:scale-105 duration-500"
             />
-            <div class="m-3">
-            <FaRegHeart className="m-1" />
+            <div className="m-3">
+              <FaRegHeart className="m-1" />
               <div className="flex flex-row ">
                 <h3 className="flex ">
                   <FaIndianRupeeSign className="mt-1" />
                   12,000
                 </h3>{" "}
-                
               </div>
               <p className="text-base">Featured Product</p>
               <h2 className="text-xl  text-yellow-700">Gold Earrings</h2>
               <span>Sale 10% </span>
               <div className="flex gap-1">
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Add to Cart
-              </a>
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Buy
-              </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Add to Cart
+                </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Buy
+                </a>
               </div>
             </div>
           </div>
@@ -180,37 +182,33 @@ const Hero = () => {
               alt="img"
               className="h-[15rem] w-full  xl:h-[20rem] rounded-lg  hover:scale-105 duration-500"
             />
-            <div class="m-3">
+            <div className="m-3">
               <FaRegHeart className="m-1  " />
 
               <div className="flex flex-row ">
-            
-
                 <h3 className="flex ">
                   <FaIndianRupeeSign className="mt-1" />
                   27,000
                 </h3>{" "}
-               
               </div>
               <p className="text-base">Bestselling </p>
-        
+
               <h2 className="text-xl text-yellow-700 ">Gold Chain</h2>
               <span>Sale 30% </span>
               <div className="flex gap-1">
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Add to Cart
-              </a>
-              <a
-                herf="/Gift"
-                className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
-              >
-                Buy
-              </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-32  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Add to Cart
+                </a>
+                <a
+                  herf="/Gift"
+                  className="bg-amber-600 w-14  border-black px-4 py-[1.px] rounded-full mt-1 flex "
+                >
+                  Buy
+                </a>
               </div>
-             
             </div>
           </div>
         </div>
@@ -227,11 +225,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div class="flex items-center py-4 mt-10">
-        <span class="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10 md:text-3xl lg:text-4xl">
+      <div className="flex items-center py-4 mt-10">
+        <span className="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10 md:text-3xl lg:text-4xl">
           ABOUT US
         </span>
-        <div class="flex-grow h-px bg-gray-400"></div>
+        <div className="flex-grow h-px bg-gray-400"></div>
       </div>
       <div className=" text-sm lg:text-base lg:mx-16 mx-10">
         <p>
@@ -254,9 +252,9 @@ const Hero = () => {
         Read More..
       </button>
 
-      <div class="flex items-center py-4 mt-10">
-        <div class="flex-grow h-px bg-gray-400"></div>
-        <span class="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10  md:text-3xl lg:text-4xl">
+      <div className="flex items-center py-4 mt-10">
+        <div className="flex-grow h-px bg-gray-400"></div>
+        <span className="flex-shrink text-2xl text-gray-500  font-serif lg:mx-16 mx-10  md:text-3xl lg:text-4xl">
           KD UPDATES
         </span>
       </div>
@@ -264,7 +262,7 @@ const Hero = () => {
         <div className="mt-6 lg:mt-10  ">
           <Slider {...settings}>
             {data.map((d) => (
-              <div className="h-[400px] sm:h-[450px] text-black rounded-lg  bg-gray-200  ">
+              <div key={d.id} className="h-[400px] sm:h-[450px] text-black rounded-lg  bg-gray-200  ">
                 <div className=" h-60 lg:h-80 md:h-80 bg-gray-200  rounded-xl flex justify-center items-center ">
                   <img
                     src={d.img}

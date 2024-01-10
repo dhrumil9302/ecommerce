@@ -14,13 +14,12 @@ import { FaTimes } from "react-icons/fa";
 // import  DropdownLinks from "react-dropdown";
 
 const Menu1 = [
-  
+  // {
+  //   id: 1,
+  //   name: "Others",
+  //   link: "/others",
+  // },
   {
-    id: 1,
-    name: "Others",
-    link: "/others",
-  },
-{
     id: 2,
     name: "Gift Card",
     link: "/giftcard",
@@ -59,7 +58,7 @@ const DropdownLink = [
     link: "/#",
   },
   {
-    id: 5,
+    id: 6,
     name: "Others Jewellery",
     link: "/#",
   },
@@ -76,22 +75,22 @@ const Subtitle1 = [
     link: "/#",
   },
   {
-    id: 1,
+    id: 3,
     name: "Navratna",
     link: "/#",
   },
   {
-    id: 2,
+    id: 4,
     name: "Couple Brands",
     link: "/#",
   },
   {
-    id: 1,
+    id: 5,
     name: "Eternity",
     link: "/#",
   },
   {
-    id: 2,
+    id: 6,
     name: "Solitaire",
     link: "/#",
   },
@@ -108,17 +107,17 @@ const Subtitle2 = [
     link: "/#",
   },
   {
-    id: 1,
+    id: 3,
     name: "Jhumkha",
     link: "/#",
   },
   {
-    id: 2,
+    id: 4,
     name: "Hoops",
     link: "/#",
   },
   {
-    id: 1,
+    id: 5,
     name: "Solitraine",
     link: "/#",
   },
@@ -135,22 +134,22 @@ const Subtitle3 = [
     link: "/#",
   },
   {
-    id: 1,
+    id: 3,
     name: "Choker",
     link: "/#",
   },
   {
-    id: 2,
+    id: 4,
     name: "Delicate",
     link: "/#",
   },
   {
-    id: 1,
+    id: 5,
     name: "Lariat",
     link: "/#",
   },
   {
-    id: 2,
+    id: 6,
     name: "Pandant Nacklace",
     link: "/#",
   },
@@ -167,32 +166,32 @@ const Subtitle4 = [
     link: "/#",
   },
   {
-    id: 1,
+    id: 3,
     name: "Broad Bangles",
     link: "/#",
   },
   {
-    id: 2,
+    id: 4,
     name: "Entrnity Bangles",
     link: "/#",
   },
   {
-    id: 1,
+    id: 5,
     name: "Chain Bracelets",
     link: "/#",
   },
   {
-    id: 2,
+    id: 6,
     name: "Flexi Bracelets",
     link: "/#",
   },
   {
-    id: 1,
+    id: 7,
     name: "Oval Bracelets",
     link: "/#",
   },
   {
-    id: 2,
+    id: 8,
     name: "Tennis Bracelets",
     link: "/#",
   },
@@ -209,12 +208,12 @@ const Subtitle5 = [
     link: "/#",
   },
   {
-    id: 1,
+    id: 3,
     name: "Casual Pendents",
     link: "/#",
   },
   {
-    id: 2,
+    id: 4,
     name: "Simple Chain",
     link: "/#",
   },
@@ -225,12 +224,12 @@ const Subtitle = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ size }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
- 
+
   return (
     <>
       <div>
@@ -277,14 +276,13 @@ const Navbar = () => {
                   href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black h-6 mt-3 m-0.5 px-1 md:px-2  rounded-full hidden sm:block"
                 >
-                  <div className="transition-all duration-200 relative" >
+                  <div className="transition-all duration-200 relative">
                     <IoMdCart className="size-3 mt-1" />
-                   
+
                     <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute -top-3  left-2 text-center leading-5">
-                      0
+                      {size}
                     </span>
-                 
-                     </div>
+                  </div>
                 </a>
               </div>
               <div className="sm:hidden m-2 ">
@@ -301,6 +299,9 @@ const Navbar = () => {
 
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
+              <li>
+                <a href="/">Home</a>
+              </li>
               <li className="group relative cursor-pointer ml-2">
                 <a
                   href="#"
@@ -316,7 +317,7 @@ const Navbar = () => {
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <a
+                        <div
                           href={data.link}
                           className="group/{jewellery}   w-full rounded-md p-2 flex "
                         >
@@ -330,14 +331,14 @@ const Navbar = () => {
                               <li key={data.id}>
                                 <a
                                   href={data.link}
-                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20"
+                                  className=" w-full rounded-md p-2 flex hover:bg-primary/20"
                                 >
                                   {data.name}
                                 </a>
                               </li>
                             ))}
                           </ul>
-                        </a>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -381,7 +382,7 @@ const Navbar = () => {
                     </span>
                   </a>
                   <a
-                      href="/Gift"
+                    href="/Gift"
                     className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
                   >
                     <span className="transition-all duration-200">
@@ -415,7 +416,7 @@ const Navbar = () => {
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <a
+                        <div
                           href={data.link}
                           className="group/{jewellery}   w-full rounded-md p-2 flex "
                         >
@@ -429,14 +430,14 @@ const Navbar = () => {
                               <li key={data.id}>
                                 <a
                                   href={data.link}
-                                  className=" inline-block w-full rounded-md p-2 flex hover:bg-primary/20"
+                                  className=" w-full rounded-md p-2 flex hover:bg-primary/20"
                                 >
                                   {data.name}
                                 </a>
                               </li>
                             ))}
                           </ul>
-                        </a>
+                        </div>
                       </li>
                     ))}
                   </ul>

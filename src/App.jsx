@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 // import Giftcard from "./routes/Giftcard";
 import Gift from "./routes/Gift";
+import Shop from "./routes/Shop";
+import Navbar from "./Component/Navbar";
 
+const App = () => {
+  const [show, setshow] = useState(true);
+  const [cart, setcart] = useState([]);
 
-function App() {
+  const handleClick = (item) => {
+    // console.log(item);
+      let isPresent = false;
+      cart.forEach((product)=>{
+        if (item.id === product.id)
+        isPresent = true;
+      })
+      if (isPresent)
+      return;
+    setcart([...cart, item]);
+  };
+
   return (
     <div className="App">
+      <Navbar size={cart.length} />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/giftcard" element={<Giftcard />} /> */}
         <Route path="/gift" element={<Gift />} />
-        
+        <Route path="/product" element={<Shop handleClick={handleClick} />} />
       </Routes>
-    
     </div>
-    // <>
-    // <Navbar/>
-    // <Hero/>
-    // <Footer/>
-    // </>
   );
-}
+};
 
 export default App;

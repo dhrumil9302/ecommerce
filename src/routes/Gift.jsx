@@ -9,26 +9,7 @@ const Gift = () => {
   return (
     <>
     <div div className="">
-      <div className="shadow-md w-full   ">
-        <div className=" bg-white dark:bg-gray-900 dark:text-white flex justify-between ">
-          <div className="flex justify-between">
-            <div className="text-4xl sm:text-5xl mx-2  flex my-4 ">
-              <div className=" items-center  ">
-                <GiFleurDeLys />
-              </div>
-
-              <div className="text-base  font-serif  mt-0 sm:mt-2">
-                <span className="text-4xl  ">KD</span>
-                <i className="text-xs md:text-base">jewellers</i>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src={logo} className="w-16 my-2 mx-2"/>
-          </div>
-        </div>
-      </div> 
-
+     
       <div className="flex my-20 ml-7" >
         <div className="bg-gray-200 h-96 w-2/3   ">
           <div className="flex justify-between">

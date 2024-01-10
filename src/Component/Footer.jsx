@@ -4,7 +4,6 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiTwitter } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa6";
-import AboutUs from "../routes/AboutUs";
 
 const Footer = () => {
   return (
@@ -31,14 +30,14 @@ const Footer = () => {
       </div>
 
       <div className="bg-black h-[0.01rem] mt-10 "></div>
-      <div className=" ">
+      <div >
         <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row  text-base md:text-sm p-5 mx-4 font-serif justify-between">
           <div className=" flex flex-col">
             <a href="/AboutUs" className="my-3">
               ABOUT US
             </a>
             <a>
-              <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+              <div className="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
             </a>
             <a href="/">About Our Company</a>
             <a href="/">Privacy Policy</a>
@@ -47,19 +46,18 @@ const Footer = () => {
             <a href="/">Customer Reviews</a>
             <div>
               <button
-                className=""
                 onClick={() => alert("search not available yet")}
               >
                 <IoLogoInstagram size={20} />
               </button>
               <button
-                className
+                
                 onClick={() => alert("search not available yet")}
               >
                 <CiTwitter size={20} />
               </button>
               <button
-                className
+                
                 onClick={() => alert("search not available yet")}
               >
                 <FaWhatsapp size={20} />
@@ -69,9 +67,9 @@ const Footer = () => {
           <div className=" flex flex-col  ">
             <a href="/" className="my-3">
               WHY KD?
-            </a>{" "}
+            </a>
             <a>
-              <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+              <div className="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
             </a>
             <a href="/">15-Day Returns</a>
             <a href="/">Cancle & Refund</a>
@@ -87,7 +85,7 @@ const Footer = () => {
               CONTACT US
             </a>
             <a>
-              <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+              <div className="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
             </a>
             <a href="/">India +91 22 61066262</a>
             <a href="/">(9am-9pm, 7 days a week)</a>
@@ -100,7 +98,7 @@ const Footer = () => {
           <div className="">
             <div className="my-3">FEEDBACK</div>
             <a>
-              <div class="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
+              <div className="flex-grow h-px mt-[-14px] w-10 bg-gray-400"></div>
             </a>
             <div className="mt-5 flex flex-col ">
               <a>
@@ -111,7 +109,7 @@ const Footer = () => {
                   className=" border-black"
                 ></input>
               </a>
-              <div class="flex-grow h-px bg-gray-400"></div>
+              <div className="flex-grow h-px bg-gray-400"></div>
               <a>
                 <input
                   type="text"
@@ -120,7 +118,7 @@ const Footer = () => {
                   className=" border-black"
                 ></input>
               </a>
-              <div class="flex-grow h-px bg-gray-400"></div>
+              <div className="flex-grow h-px bg-gray-400"></div>
               <a>
                 <input
                   type="text"
@@ -129,7 +127,7 @@ const Footer = () => {
                   className=" border-black"
                 ></input>
               </a>
-              <div class="flex-grow h-px bg-gray-400"></div>
+              <div className="flex-grow h-px bg-gray-400"></div>
 
               <button
                 onClick={() => alert("Cart not available yet")}
