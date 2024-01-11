@@ -1,60 +1,114 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GiFleurDeLys } from "react-icons/gi";
-import  logo  from "../assets/safe.png";
-
+import logo from "../assets/safe.png";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 
+const Gift = ({ cart, setCart }) => {
+  const [price, setPrice] = useState(0);
 
-const Gift = () => {
+  const handlePrice = () => {
+    let ans = 0;
+    cart.map((item) => (ans += item.amount * item.Price));
+    setPrice(ans);
+  };
+
+  const handleRemove = (id) => {
+    const arr = cart.filter((item) => item.id !== id);
+    setCart(arr);
+  };
+
+  useEffect(() => {
+    handlePrice();
+  });
+
+  const handleChange = (item, d) => {
+    let ind = -1;
+    cart.forEach((data, index) => {
+      if (data.id === item.id) ind = index;
+    });
+    const tempArr = cart;
+    tempArr[ind].amount += d;
+
+    if (tempArr[ind].amount === 0) {
+      tempArr[ind].amount = 1;
+    }
+    setCart([...tempArr]);
+  };
+
   return (
     <>
-    <div div className="">
-     
-      <div className="flex my-20 ml-7" >
-        <div className="bg-gray-200 h-96 w-2/3   ">
-          <div className="flex justify-between">
-            <h2 className="ml-2 px-1 pt-4 font-serif">Shoppig Cart</h2>
-            <h2 className="mr-2 py-4 pt-4 text-sm">4  Items</h2>
+      <div className="flex  ">
+        <div className=" w-full md:w-10/12 lg:w-10/12 lg:mx-20 lg:my-10 md:mx-20 md:my-10  ">
+          <div className="text-center">
+            <h2 className=" py-8 text-3xl font-serif">Shoppig Cart</h2>
           </div>
-          <div className=" flex px-2 justify-between bg-blue-400 text-white" >
+          <div className="bg-black h-px my-3 block sm:hidden"></div>
+          <div className=" bg-blue-400 hidden sm:block ">
+            <div className=" grid grid-cols-5  mx-12   md:mx-10 justify-between text-white">
               <h4>image</h4>
               <h4>Name</h4>
+              <h4>Quantity</h4>
               <h4>Price</h4>
               <h4>Delete</h4>
+            </div>
           </div>
-          <div className="bg-black h-px my-3"></div>
-        </div>
-        <div className="bg-gray-200 h-96 w-52 ml-5 ">
-        <div>
-          <h2 className="font-serif ml-2 px-1 pt-4">Order Summary</h2>
-        </div>
-        <div className=" my-3 flex px-2 justify-between bg-blue-400 text-white" >
-              <h4>4 Items</h4>
-             <h4>600.00</h4>
-          </div>
+<div className="">
+          {cart.map((item) => (
+            <div key={item.id}>
+              <div className="grid grid-cols-1 sm:grid-cols-5   lg:mx-10 md:mx-8 items-center text-black font-serif ">
+                <div>
+                  <img
+                    src={item.img}
+                    alt={item.id}
+                    className="h-20 w-20  my-2 rounded-full border border-black "
+                  />
+                </div>
 
-          <div className="px-2">
-            <h2 className="text-sx">Shipping</h2>
-            <input type="text" placeholder="standard Deilivery"/>
-              <h2 className="text-sx">Promo code</h2>
-              <input type="text" placeholder="Enter your code"/>
-              <button className="bg-black text-white text-sm m-2 w-20 rounded-lg" >Apply</button>
+                <div>
+                  <p className="my-2 ">{item.Title}</p>
+                </div>
+                <div className="my-2 ">
+                  <button
+                    onClick={() => handleChange(item, +1)}
+                    className="border border-black rounded-lg w-6 mx-1 "
+                  >
+                    +
+                  </button>
+                  <button className="border border-black rounded-lg w-6 mx-1 ">
+                    {item.amount}
+                  </button>
+                  <button
+                    onClick={() => handleChange(item, -1)}
+                    className="border border-black rounded-lg w-6 mx-1"
+                  >
+                    -
+                  </button>
+                </div>
+                <div className="my-2">
+                  <span>{item.Price}</span>
+                </div>
+                <div className="my-2">
+                  <span
+                    onClick={() => handleRemove(item.id)}
+                    className="broder border-black  bg-gray-400
+                   rounded-xl p-2"
+                  >
+                    Remove
+                  </span>
+                </div>
+              </div>
+              <div className="bg-black h-px my-3"></div>
+            </div>
+          ))}
+</div>
+          <div className=" font-serif ">
+            <span className="">Total Price of Your Cart</span>
+            <span className="md:mx-[35%] lg:mx-[34%]">Rs-{price}</span>
           </div>
-          <div className="bg-black h-px my-3"></div>
-          <div className="flex justify-between">
-            <h2>Total</h2>
-            <h2>600.00</h2>
-          </div>
-          <div>
-            <button className="bg-blue-400 rounded-md w-full px-5 my-8">Check Out</button>
-          </div>
+        </div>
       </div>
-      </div>
-    </div>
-   
-
     </>
   );
 };
 
-export default Gift
+export default Gift;

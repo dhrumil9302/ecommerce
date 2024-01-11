@@ -23,6 +23,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -85,12 +86,12 @@ const Hero = () => {
             home the the promise of a brighter tommorow. <br /> Paired to
             perfection .
           </p>
-          <a
-            href="/Product"
+          <Link
+            to="/Product"
             className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5"
           >
             Shop Now
-          </a>
+          </Link>
         </div>
       </div>
 

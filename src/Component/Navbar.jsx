@@ -9,7 +9,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import J1 from "../assets/j1.jpg";
 import Hero from "./Hero";
 import { FaBars } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 // import  DropdownLinks from "react-dropdown";
 
@@ -22,7 +22,7 @@ const Menu1 = [
   {
     id: 2,
     name: "Gift Card",
-    link: "/giftcard",
+    link: "/product",
   },
 
   {
@@ -234,7 +234,7 @@ const Navbar = ({ size }) => {
     <>
       <div>
         <div className="shadow-md w-full ">
-          <div className=" bg-white dark:bg-gray-900 dark:text-white ">
+          <div className=" bg-white dark:bg-gray-900  dark:text-white ">
             <div className="flex justify-between">
               <div className="text-4xl sm:text-5xl mx-2  flex  ">
                 <div className=" items-center ">
@@ -272,8 +272,8 @@ const Navbar = ({ size }) => {
                     <FaRegHeart className="size-3 mt-1" />
                   </span>
                 </a>
-                <a
-                  href="/gift"
+                <Link
+                  to="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black h-6 mt-3 m-0.5 px-1 md:px-2  rounded-full hidden sm:block"
                 >
                   <div className="transition-all duration-200 relative">
@@ -283,7 +283,7 @@ const Navbar = ({ size }) => {
                       {size}
                     </span>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="sm:hidden m-2 ">
                 <button onClick={toggleMenu}>
@@ -300,7 +300,7 @@ const Navbar = ({ size }) => {
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li className="group relative cursor-pointer ml-2">
                 <a
@@ -317,8 +317,7 @@ const Navbar = ({ size }) => {
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <div
-                          href={data.link}
+                        <ul
                           className="group/{jewellery}   w-full rounded-md p-2 flex "
                         >
                           {data.name}
@@ -329,16 +328,16 @@ const Navbar = ({ size }) => {
                           <ul className="  z-[9999] w-full rounded-md p-2 hidden group-hover/{jewellery}:block hover:bg-primary/20">
                             {Subtitle1.map((data) => (
                               <li key={data.id}>
-                                <a
-                                  href={data.link}
+                                <Link
+                                  to={data.link}
                                   className=" w-full rounded-md p-2 flex hover:bg-primary/20"
                                 >
                                   {data.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -347,12 +346,12 @@ const Navbar = ({ size }) => {
 
               {Menu1.map((data) => (
                 <li key={data.id}>
-                  <a
-                    href={data.link}
+                  <Link
+                    to={data.link}
                     className="inline-block px-4 hover:text-orange-500 duration-200"
                   >
                     {data.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -389,35 +388,37 @@ const Navbar = ({ size }) => {
                       <FaRegHeart className="size-3 mt-1" />
                     </span>
                   </a>
-                  <a
-                    href="/Gift"
+                  <Link
+                    to="/gift"
                     className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
                   >
                     <span className="transition-all duration-200">
                       <IoMdCart className="size-3 mt-1" />
+                      
                     </span>
-                  </a>
+                    
+                  </Link>
                 </div>
               </div>
 
               <div className="bg-black h-[0.01rem] m-2 "></div>
               <li className="group relative cursor-pointer ml-4">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="flex items-center gap-[2px]   hover:text-orange-500 "
                 >
                   Jewellery
                   <span>
                     <FaCaretRight className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
-                </a>
+                </Link>
 
                 <div className="  z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black ">
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <div
-                          href={data.link}
+                        <ul
+                          
                           className="group/{jewellery}   w-full rounded-md p-2 flex "
                         >
                           {data.name}
@@ -428,16 +429,16 @@ const Navbar = ({ size }) => {
                           <ul className="  z-[9999] w-full rounded-md p-2 hidden group-hover/{jewellery}:block hover:bg-primary/20">
                             {Subtitle1.map((data) => (
                               <li key={data.id}>
-                                <a
-                                  href={data.link}
+                                <Link
+                                  to={data.link}
                                   className=" w-full rounded-md p-2 flex hover:bg-primary/20"
                                 >
                                   {data.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -445,12 +446,12 @@ const Navbar = ({ size }) => {
               </li>
               {Menu1.map((data) => (
                 <li key={data.id}>
-                  <a
-                    href={data.link}
+                  <Link
+                    to={data.link}
                     className="inline-block px-4 hover:text-orange-500 duration-200"
                   >
                     {data.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

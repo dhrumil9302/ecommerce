@@ -8,7 +8,7 @@ import Navbar from "./Component/Navbar";
 
 const App = () => {
   const [show, setshow] = useState(true);
-  const [cart, setcart] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const handleClick = (item) => {
     // console.log(item);
@@ -19,7 +19,7 @@ const App = () => {
       })
       if (isPresent)
       return;
-    setcart([...cart, item]);
+    setCart([...cart, item]);
   };
 
   return (
@@ -28,7 +28,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/giftcard" element={<Giftcard />} /> */}
-        <Route path="/gift" element={<Gift />} />
+        <Route path="/gift" element={<Gift cart={cart} setCart={setCart}/>} />
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
       </Routes>
     </div>
