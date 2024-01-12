@@ -233,7 +233,7 @@ const Navbar = ({ size }) => {
   return (
     <>
       <div>
-        <div className="shadow-md w-full ">
+        <div className="shadow-md w-full  ">
           <div className=" bg-white dark:bg-gray-900  dark:text-white ">
             <div className="flex justify-between">
               <div className="text-4xl sm:text-5xl mx-2  flex  ">
@@ -297,9 +297,48 @@ const Navbar = ({ size }) => {
             </div>
           </div>
 
+          <div className="block sm:hidden mb-2  ">
+                <div className=" mx-4 flex ">
+                  <a
+                    href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoMdSearch className="size-3 mt-1 " />
+                    </span>
+                  </a>
+                  <a
+                    href="/Gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoPerson className="size-3 mt-1" />
+                    </span>
+                  </a>
+                  <a
+                    href="/"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+                  >
+                    <span className="transition-all duration-200">
+                      <FaRegHeart className="size-3 mt-1" />
+                    </span>
+                  </a>
+                  <Link
+                    to="/gift"
+                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+                  >
+                    <span className="transition-all duration-200">
+                      <IoMdCart className="size-3 mt-1" />
+                      
+                    </span>
+                    
+                  </Link>
+                </div>
+              </div>
+
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
-              <li>
+              <li className=" hover:text-orange-500 ">
                 <Link to="/">Home</Link>
               </li>
               <li className="group relative cursor-pointer ml-2">
@@ -362,44 +401,7 @@ const Navbar = ({ size }) => {
                 isMenuOpen ? "" : "hidden"
               }`}
             >
-              <div>
-                <div className=" mx-4 flex">
-                  <a
-                    href="/Gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoMdSearch className="size-3 mt-1 " />
-                    </span>
-                  </a>
-                  <a
-                    href="/Gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoPerson className="size-3 mt-1" />
-                    </span>
-                  </a>
-                  <a
-                    href="/Gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
-                  >
-                    <span className="transition-all duration-200">
-                      <FaRegHeart className="size-3 mt-1" />
-                    </span>
-                  </a>
-                  <Link
-                    to="/gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoMdCart className="size-3 mt-1" />
-                      
-                    </span>
-                    
-                  </Link>
-                </div>
-              </div>
+             
 
               <div className="bg-black h-[0.01rem] m-2 "></div>
               <li className="group relative cursor-pointer ml-4">

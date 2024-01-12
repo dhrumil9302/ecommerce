@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GiFleurDeLys } from "react-icons/gi";
 import logo from "../assets/safe.png";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Gift = ({ cart, setCart }) => {
   const [price, setPrice] = useState(0);
@@ -52,15 +53,15 @@ const Gift = ({ cart, setCart }) => {
               <h4>Delete</h4>
             </div>
           </div>
-<div className="">
+
           {cart.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} >
               <div className="grid grid-cols-1 sm:grid-cols-5   lg:mx-10 md:mx-8 items-center text-black font-serif ">
                 <div>
                   <img
                     src={item.img}
                     alt={item.id}
-                    className="h-20 w-20  my-2 rounded-full border border-black "
+                    className="h-20 w-20  my-2 rounded-full border border-black  "
                   />
                 </div>
 
@@ -100,11 +101,16 @@ const Gift = ({ cart, setCart }) => {
               <div className="bg-black h-px my-3"></div>
             </div>
           ))}
-</div>
+
           <div className=" font-serif ">
             <span className="">Total Price of Your Cart</span>
-            <span className="md:mx-[35%] lg:mx-[34%]">Rs-{price}</span>
+            <span className="md:mx-[30%] lg:mx-[34%] xl:mx-[40%]">Rs-{price}</span>
           </div>
+          <div>
+            <Link to="/Form">
+          <button className="font-serif ml-24 my-5  md:ml-60 md:my-10 lg:ml-[50%] lg:my-10 bg-blue-400 p-2 rounded-xl text-white ">
+           Check Out </button></Link>
+        </div>
         </div>
       </div>
     </>
