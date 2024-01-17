@@ -82,16 +82,15 @@ const Product = ({ handleClick }) => {
   return (
     <div className="m-12">
       <div className="  my-4 grid grid-cols-1 sm:grid-cols-3">
-        {ProductData1.map((item) => (
-          <div key={item.id} className="px-2 mx-auto font-serif ">
+        {ProductData1.map((item, index) => (
+          <div key={index} className="px-2 mx-auto font-serif ">
             <div className=" ">
               <div>
                 <img
                   src={item.img}
                   alt=""
-                  className="h-[15rem]  w-[15rem]  xl:h-[20rem] 2xl:w-[22rem] rounded-lg  hover:scale-105 duration-500 "
-                ></img>
-                <div className="mb-3">
+                  className="h-[15rem]  w-[15rem]  xl:h-[20rem] 2xl:w-[22rem] rounded-lg  hover:scale-105 duration-500 "></img>
+                <div className="mb-3 2xl:mt-4">
                   <FaRegHeart className="m-1 " />
                   <h3>{item.Title}</h3>
                   <p className="flex">

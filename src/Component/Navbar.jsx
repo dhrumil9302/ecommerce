@@ -248,14 +248,19 @@ const Navbar = ({ size }) => {
                 </div>
               </div>
               <div className="flex mr-2 ">
-                <a
+              <input
+              type="text"
+              placeholder="search"
+              className="hidden sm:block w-[5000px] h-6 mt-3 mr-1npm  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
+            />
+                {/* <a
                   href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
                     <IoMdSearch className="size-3 mt-1" />
                   </span>
-                </a>
+                </a> */}
                 <a
                   href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
@@ -298,15 +303,20 @@ const Navbar = ({ size }) => {
           </div>
 
           <div className="block sm:hidden mb-2  ">
-                <div className=" mx-4 flex ">
-                  <a
+                <div className=" mx-4 flex justify-end">
+                  {/* <a
                     href="/Gift"
                     className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
                   >
                     <span className="transition-all duration-200">
                       <IoMdSearch className="size-3 mt-1 " />
                     </span>
-                  </a>
+                  </a> */}
+                  <input
+              type="text"
+              placeholder="search"
+              className="w-[500px] h-6 mt-3 mr-2 text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
+            />
                   <a
                     href="/Gift"
                     className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "

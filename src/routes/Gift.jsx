@@ -28,7 +28,7 @@ const Gift = ({ cart, setCart }) => {
       if (data.id === item.id) ind = index;
     });
     const tempArr = cart;
-    tempArr[ind].amount += d;
+    tempArr[ind].amount += d; 
 
     if (tempArr[ind].amount === 0) {
       tempArr[ind].amount = 1;
@@ -56,16 +56,15 @@ const Gift = ({ cart, setCart }) => {
 
           {cart.map((item) => (
             <div key={item.id} >
-              <div className="grid grid-cols-1 sm:grid-cols-5   lg:mx-10 md:mx-8 items-center text-black font-serif ">
+              <div className="grid grid-cols-1 sm:grid-cols-5 mx-28 lg:mx-10 md:mx-8 items-center text-black font-serif ">
                 <div>
                   <img
                     src={item.img}
                     alt={item.id}
-                    className="h-20 w-20  my-2 rounded-full border border-black  "
-                  />
+                    className="h-20 w-20 my-2 rounded-full border border-black"/>
                 </div>
 
-                <div>
+                <div >
                   <p className="my-2 ">{item.Title}</p>
                 </div>
                 <div className="my-2 ">
@@ -88,6 +87,7 @@ const Gift = ({ cart, setCart }) => {
                 <div className="my-2">
                   <span>{item.Price}</span>
                 </div>
+                
                 <div className="my-2">
                   <span
                     onClick={() => handleRemove(item.id)}
@@ -102,9 +102,9 @@ const Gift = ({ cart, setCart }) => {
             </div>
           ))}
 
-          <div className=" font-serif ">
+          <div className=" font-serif px-10 lg:px-0 md:px-0 flex flex-col md:flex-row lg:flex-row">
             <span className="">Total Price of Your Cart</span>
-            <span className="md:mx-[30%] lg:mx-[34%] xl:mx-[40%]">Rs-{price}</span>
+            <span className="md:mx-[30%] lg:mx-[34%] xl:mx-[40%] ">Rs-{price}</span>
           </div>
           <div>
             <Link to="/Form">
