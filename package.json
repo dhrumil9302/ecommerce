@@ -19,7 +19,8 @@
     "react-stripe-checkout": "^2.6.3",
     "reactstrap": "^9.2.1",
     "slick-carousel": "^1.8.1",
-    "slider-carousel": "^1.1.1"
+    "slider-carousel": "^1.1.1",
+    "sweetalert2": "^11.10.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

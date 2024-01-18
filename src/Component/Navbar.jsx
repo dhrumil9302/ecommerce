@@ -21,7 +21,7 @@ const Menu1 = [
   // },
   {
     id: 2,
-    name: "Gift Card",
+    name: "Gallary",
     link: "/product",
   },
 

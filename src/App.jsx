@@ -7,6 +7,7 @@ import Shop from "./routes/Shop";
 import Navbar from "./Component/Navbar";
 import Form  from "./routes/Form";
 
+
 const App = () => {
   const [show, setshow] = useState(true);
   const [cart, setCart] = useState([]);
@@ -31,7 +32,8 @@ const App = () => {
         {/* <Route path="/giftcard" element={<Giftcard />} /> */}
         <Route path="/gift" element={<Gift cart={cart} setCart={setCart}/>} />
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
-        <Route path="/form" element={<Form cart={cart} setCart={setCart} />}></Route>
+        <Route path="/form" element={<Form cart={cart} setCart={setCart} handleClick={handleClick} />}></Route>
+      
       </Routes>
     </div>
   );

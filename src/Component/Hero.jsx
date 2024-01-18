@@ -24,6 +24,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { GiEarrings } from "react-icons/gi";
+import { GiNecklaceDisplay } from "react-icons/gi";
+import { GiBigDiamondRing } from "react-icons/gi";
 
 const data = [
   {
@@ -88,8 +91,7 @@ const Hero = () => {
           </p>
           <Link
             to="/Product"
-            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5"
-          >
+            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5 ">
             Shop Now
           </Link>
         </div>
@@ -108,9 +110,34 @@ const Hero = () => {
           <img src={Brand8} alt="img" className="w-36" />
         </div>
       </marquee>
+{/* 
 
+      <div className="px-14">
+        <div>
+          <h1>FEATURE</h1>
+          <p>Customized Jewelry</p>
+          <div className="flex justify-between">
+            <div>
+            <GiEarrings />
+            <h1>Tear-drop Earrings</h1>
+            </div>
+            <div>
+            <GiBigDiamondRing />
+            <h1>Customized Rings</h1>
+            </div>
+            <div>
+            <GiNecklaceDisplay />
+            <h1>Chain Necklaces</h1>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+<div className="m-16 ">
+  <h1 className="font-serif text-center text-4xl ">Popular Collection</h1>
+</div>
       <div className="px-2 font-serif ">
-        <div className="lg:max-w-[1240px] xl:max-w-[1350px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4  xl:mt-[40px] xl:mx-36 ">
+        <div className="lg:max-w-[1240px] xl:max-w-[1350px]  sm:mx-10 lg:mx-10 md:grid grid-cols-3 gap-3 m-4 md:my-20 lg:my-20 xl:mt-[40px] xl:mx-36 ">
           <div>
             <img
               src={J2}
