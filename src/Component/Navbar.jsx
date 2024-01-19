@@ -234,7 +234,7 @@ const Navbar = ({ size }) => {
     <>
       <div>
         <div className="shadow-md w-full  ">
-          <div className=" bg-white dark:bg-gray-900  dark:text-white ">
+          <div className="  dark:bg-gray-900  dark:text-white ">
             <div className="flex justify-between">
               <div className="text-4xl sm:text-5xl mx-2  flex  ">
                 <div className=" items-center ">
@@ -251,7 +251,7 @@ const Navbar = ({ size }) => {
               <input
               type="text"
               placeholder="search"
-              className="hidden sm:block w-[5000px] h-6 mt-3 mr-1npm  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
+              className="hidden sm:block w-[5000px] h-6 mt-3 mr-1  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
             />
                 {/* <a
                   href="/gift"

@@ -84,20 +84,20 @@ const Hero = () => {
         <div className="mx-10 lg:ml-14 md:mt-11 lg:mt-20 md:w-1/2 lg:w-1/2  xl:mt-[130px]">
           <h6 className="text-base lg:text-xl">--- New Collection ---</h6>
           <h2 className="text-3xl lg:text-3xl mt-2">JEWELLERY</h2>
-          <p className="text-[14px] md:text-[13px] lg:text-[14px] mt-2 mr-2">
+          <p className="text-[14px] md:text-[13px] lg:text-[14px] mt-2 mr-2 my-4">
             your love for diamonds meets our promise to make them yours. Take
             home the the promise of a brighter tommorow. <br /> Paired to
             perfection .
           </p>
           <Link
             to="/Product"
-            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5 ">
+            className="bg-amber-600 border-black px-6 py-[1.9px] rounded-full mt-5  ">
             Shop Now
           </Link>
         </div>
       </div>
 
-      <marquee className=" bg-gray-900 w-full h-36 rounded-lg mt-4">
+      <marquee className=" bg-gray-900 w-full h-36 rounded-lg mt-10">
         <div className="flex gap-6 my-3">
           <img src={Brand} alt="img" className="w-36 " />
           <img src={Brand1} alt="img" className="w-36" />

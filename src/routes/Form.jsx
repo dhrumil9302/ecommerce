@@ -5,7 +5,18 @@ import p1   from "../assets/cards.png";
 import { FaBagShopping } from "react-icons/fa6";
 import swal from 'sweetalert2'
 
-const Form = ({ cart, setCart, handleSubmit }) => {
+
+const Form = ({cart, setCart,}) => {
+  // const [data, setdata] = useState({name:"", email:"", phone:""})
+  // const handlechange = (e) =>{
+  //   const name = e.target.name;
+  //   const  value = e.target.value;
+  //   setdata({...data, [name]:value})
+  // }
+  // const handleSubmit = (e) =>{
+  //   e.preventDefault()
+  //   console.log(data)
+  // }
   const [price, setPrice] = useState(0);
 
   const handlePrice = () => {
@@ -31,29 +42,31 @@ const Form = ({ cart, setCart, handleSubmit }) => {
     })
    
   }
+
+
   return (
     <>
-    <div className='bg-slate-100 m-10 font-serif '>
+    <div className='bg-slate-100 m-10 my-20 font-serif '>
       <div className='flex justify-between lg:mx-48 md:mx-40   flex-col lg:flex-row md:flex-row'>   
-        <div className='my-10 xl:my-20 px-4'>
+        <div className='my-10  px-4'>
         <div className='flex gap-2'>
           <span className='text-3xl'><MdCall/></span>
           <h4 className='text-2xl xl:text-4xl md:text-xl'>Contat Details</h4>
         </div>
-        <form className="w-full max-w-sm my-4"  >
+        <form className="w-full max-w-sm my-4" >
           <div className="flex items-center border-b border-gray-500 py-2">
             <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"  placeholder="Name" />
           </div>
           <div className="flex items-center border-b border-gray-500 py-2">
-            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"  placeholder="Email Id" />
+            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" placeholder="Email Id" />
           </div>
           <div className="flex items-center border-b border-gray-500 py-2">
-            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"  placeholder="Contact Number" />
+            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" placeholder="Contact Number" />
           </div>
         </form>
       </div>
       <div className='bg-gray-400 h-auto w-px my-10   ml-10 xl:ml-px  hidden sm:block'></div>
-      <div className='my-6' >
+      <div className='my-6 md:ml-10' >
         <div className='flex gap-2 my-5  '>
           <span className='text-3xl'><FaLocationDot /></span>
           <h4 className='text-2xl xl:text-4xl md:text-xl'>Address</h4>
@@ -71,16 +84,19 @@ const Form = ({ cart, setCart, handleSubmit }) => {
           <div className="flex items-center border-b border-gray-500 py-2">
             <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" placeholder="City" />
           </div>
+        
         </form>
         </div>
         
       </div>
-      <button  className='bg-blue-400 rounded-lg p-1 my-6 mx-20 md:mx-72 lg:mx-[43%] xl:mx-[42%] xl:my-10 xl:text-xl font-serif'>Save & Continue </button>
+      <a  >
+      <button   className='bg-blue-400 rounded-lg p-1 my-6 mx-20 md:mx-72 lg:mx-[43%] xl:mx-[42%] xl:my-10 xl:text-xl font-serif'>Save & Continue </button>
+      </a>
     </div>
 
-    <div className='bg-slate-100 m-10 font-serif px-4 '>
-      <div className='flex justify-between lg:mx-48 md:mx-40   flex-col lg:flex-row md:flex-row'>   
-        <div className='my-10 xl:my-20 '>
+    <div className='bg-slate-100 m-10 my-14 font-serif px-4 '>
+      <div className='flex justify-between lg:mx-48 md:mx-20   flex-col lg:flex-row md:flex-row'>   
+        <div className='my-10  '>
         <div className='flex gap-2'>
           <span className='text-3xl'><FaBagShopping /></span>
           <h4 className='text-2xl xl:text-4xl md:text-xl'>Orders</h4>
@@ -133,8 +149,6 @@ const Form = ({ cart, setCart, handleSubmit }) => {
       </div>
       <button onClick={handleClick} className='bg-blue-400 rounded-lg p-1 my-6 mx-20 md:mx-72 lg:mx-[43%] xl:mx-[42%] xl:my-10 xl:text-xl font-serif'>Make Payment</button>
     </div>
-
-
 
 
     
