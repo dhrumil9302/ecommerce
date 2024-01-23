@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
-// import Giftcard from "./routes/Giftcard";
 import Gift from "./routes/Gift";
 import Shop from "./routes/Shop";
 import Navbar from "./Component/Navbar";

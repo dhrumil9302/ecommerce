@@ -22,7 +22,7 @@ const Menu1 = [
   {
     id: 2,
     name: "Gallary",
-    link: "/product",
+    link: "/gallary",
   },
 
   {
