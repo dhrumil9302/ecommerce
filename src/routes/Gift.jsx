@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GiFleurDeLys } from "react-icons/gi";
-import logo from "../assets/safe.png";
+
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 import { Link } from "react-router-dom";
 

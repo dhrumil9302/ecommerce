@@ -283,7 +283,6 @@ const Navbar = ({ size }) => {
                 >
                   <div className="transition-all duration-200 relative">
                     <IoMdCart className="size-3 mt-1" />
-
                     <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute -top-3  left-2 text-center leading-5">
                       {size}
                     </span>

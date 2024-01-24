@@ -286,6 +286,9 @@ const Hero = () => {
           KD UPDATES
         </span>
       </div>
+
+
+      
       <div className="w-3/4 m-auto">
         <div className="mt-6 lg:mt-10  ">
           <Slider {...settings}>

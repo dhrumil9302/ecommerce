@@ -22,7 +22,7 @@ const App = () => {
       if (isPresent)
       return;
     setCart([...cart, item]);
-  };
+  };0
 
   return (
     <div className="App">
