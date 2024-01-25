@@ -22,7 +22,12 @@ const Menu1 = [
   {
     id: 2,
     name: "Gallary",
-    link: "/gallary",
+    link: "/Product",
+  },
+  {
+    id: 3,
+    name: "Contact Us",
+    link: "/Contact",
   },
 
   {
@@ -270,11 +275,14 @@ const Navbar = ({ size }) => {
                   </span>
                 </a>
                 <a
-                  href="/gift"
+                  href="/"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
                 >
                   <span className="transition-all duration-200">
                     <FaRegHeart className="size-3 mt-1" />
+                    <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-1  right-10 text-center leading-5">
+                      {size}
+                    </span>
                   </span>
                 </a>
                 <Link
@@ -330,6 +338,7 @@ const Navbar = ({ size }) => {
                   >
                     <span className="transition-all duration-200">
                       <FaRegHeart className="size-3 mt-1" />
+                      
                     </span>
                   </a>
                   <Link
@@ -338,7 +347,9 @@ const Navbar = ({ size }) => {
                   >
                     <span className="transition-all duration-200">
                       <IoMdCart className="size-3 mt-1" />
-                      
+                      <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-11  right-3 text-center leading-5">
+                      {size}
+                    </span>
                     </span>
                     
                   </Link>

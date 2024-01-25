@@ -5,7 +5,9 @@ import Gift from "./routes/Gift";
 import Shop from "./routes/Shop";
 import Navbar from "./Component/Navbar";
 import Form  from "./routes/Form";
-import Payment from "./routes/Payment";
+import Contact from "./routes/Contact";
+import Productdtails from "./Component/Productdtails";
+import Wish from "./routes/Wish";
 
 
 const App = () => {
@@ -29,11 +31,14 @@ const App = () => {
       <Navbar size={cart.length} />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/giftcard" element={<Giftcard />} /> */}
+        
         <Route path="/gift" element={<Gift cart={cart} setCart={setCart}/>} />
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
         <Route path="/form" element={<Form cart={cart} setCart={setCart} handleClick={handleClick}  />}></Route>
         {/* <Route path="/payment" element={<Payment cart={cart} setCart={setCart} handleClick={handleClick} />}></Route> */}
+        <Route path="/Productdtails" element={<Productdtails/>} ></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/wish" element={<Wish/>}></Route>
       </Routes>
     </div>
   );

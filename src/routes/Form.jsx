@@ -89,9 +89,9 @@ const Form = ({cart, setCart,}) => {
         </div>
         
       </div>
-      <a  >
+      {/* <a  >
       <button   className='bg-blue-400 rounded-lg p-1 my-6 mx-20 md:mx-72 lg:mx-[43%] xl:mx-[42%] xl:my-10 xl:text-xl font-serif'>Save & Continue </button>
-      </a>
+      </a> */}
     </div>
 
     <div className='bg-slate-100 m-10 my-14 font-serif px-4 '>

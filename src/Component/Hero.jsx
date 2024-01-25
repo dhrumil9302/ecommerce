@@ -289,7 +289,7 @@ const Hero = () => {
 
 
       
-      <div className="w-3/4 m-auto">
+      <div className="w-3/4 m-auto mb-20">
         <div className="mt-6 lg:mt-10  ">
           <Slider {...settings}>
             {data.map((d) => (

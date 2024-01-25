@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-red-500 h-[3px] mt-20 "></div>
+      <div className="bg-red-500 h-[3px]  "></div>
       <div className="m-4 text-center ">
         <h1 className="text-2xl font">Subscribe for KD jewellrs</h1>
         <p>
