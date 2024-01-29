@@ -6,8 +6,6 @@ import { IoPerson } from "react-icons/io5";
 import { FaCaretDown, FaSnapchat } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
-import J1 from "../assets/j1.jpg";
-import Hero from "./Hero";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
@@ -280,9 +278,9 @@ const Navbar = ({ size }) => {
                 >
                   <span className="transition-all duration-200">
                     <FaRegHeart className="size-3 mt-1" />
-                    <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-1  right-10 text-center leading-5">
+                    {/* <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-1  right-10 text-center leading-5">
                       {size}
-                    </span>
+                    </span> */}
                   </span>
                 </a>
                 <Link
