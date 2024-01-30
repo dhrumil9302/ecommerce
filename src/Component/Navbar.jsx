@@ -38,27 +38,27 @@ const DropdownLink = [
   {
     id: 1,
     name: "Rings",
-    link: "/#",
+    link: "/Categories/Rings",
   },
   {
     id: 2,
     name: "Earrings",
-    link: "/#",
+    link: "/Categories/Earrings",
   },
   {
     id: 3,
     name: "Nacklace",
-    link: "/#",
+    link: "/Categories/Nacklace",
   },
   {
     id: 4,
     name: "Bangles & Bracelets",
-    link: "/#",
+    link: "/Categories/Bangles",
   },
   {
     id: 5,
     name: "Chian & pendants",
-    link: "/#",
+    link: "/Categories/Chian",
   },
   {
     id: 6,
@@ -251,11 +251,11 @@ const Navbar = ({ size }) => {
                 </div>
               </div>
               <div className="flex mr-2 ">
-              <input
-              type="text"
-              placeholder="search"
-              className="hidden sm:block w-[5000px] h-6 mt-3 mr-1  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
-            />
+                <input
+                  type="text"
+                  placeholder="search"
+                  className="hidden sm:block w-[5000px] h-6 mt-3 mr-1  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
+                />
                 {/* <a
                   href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
@@ -308,8 +308,8 @@ const Navbar = ({ size }) => {
           </div>
 
           <div className="block sm:hidden mb-2  ">
-                <div className=" mx-4 flex justify-end">
-                  {/* <a
+            <div className=" mx-4 flex justify-end">
+              {/* <a
                     href="/Gift"
                     className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
                   >
@@ -317,42 +317,40 @@ const Navbar = ({ size }) => {
                       <IoMdSearch className="size-3 mt-1 " />
                     </span>
                   </a> */}
-                  <input
-              type="text"
-              placeholder="search"
-              className="w-[500px] h-6 mt-3 mr-2 text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
-            />
-                  <a
-                    href="/Gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoPerson className="size-3 mt-1" />
-                    </span>
-                  </a>
-                  <a
-                    href="/"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
-                  >
-                    <span className="transition-all duration-200">
-                      <FaRegHeart className="size-3 mt-1" />
-                      
-                    </span>
-                  </a>
-                  <Link
-                    to="/gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoMdCart className="size-3 mt-1" />
-                      <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-11  right-3 text-center leading-5">
-                      {size}
-                    </span>
-                    </span>
-                    
-                  </Link>
-                </div>
-              </div>
+              <input
+                type="text"
+                placeholder="search"
+                className="w-[500px] h-6 mt-3 mr-2 text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
+              />
+              <a
+                href="/Gift"
+                className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+              >
+                <span className="transition-all duration-200">
+                  <IoPerson className="size-3 mt-1" />
+                </span>
+              </a>
+              <a
+                href="/"
+                className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
+              >
+                <span className="transition-all duration-200">
+                  <FaRegHeart className="size-3 mt-1" />
+                </span>
+              </a>
+              <Link
+                to="/gift"
+                className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
+              >
+                <span className="transition-all duration-200">
+                  <IoMdCart className="size-3 mt-1" />
+                  <span className="bg-red-600 text-white w-4 h-5  rounded-full absolute top-11  right-3 text-center leading-5">
+                    {size}
+                  </span>
+                </span>
+              </Link>
+            </div>
+          </div>
 
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
@@ -370,15 +368,19 @@ const Navbar = ({ size }) => {
                   </span>
                 </a>
 
-                <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md">
+                <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md ">
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <ul
-                          className="group/{jewellery}   w-full rounded-md p-2 flex "
-                        >
-                          {data.name}
-                          <span>
+                        <ul className="group/{jewellery}   w-full rounded-md p-2 flex hover:bg-primary/20">
+                      
+                          <Link
+                            to={data.link}
+                            className=" w-full rounded-md p-2 flex "
+                          >
+                            {data.name}
+                          </Link>
+                          {/* <span>
                             <FaCaretRight className="transition-all duration-200 mt-1 " />
                           </span>
 
@@ -393,7 +395,7 @@ const Navbar = ({ size }) => {
                                 </Link>
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </ul>
                       </li>
                     ))}
@@ -419,8 +421,6 @@ const Navbar = ({ size }) => {
                 isMenuOpen ? "" : "hidden"
               }`}
             >
-             
-
               <div className="bg-black h-[0.01rem] m-2 "></div>
               <li className="group relative cursor-pointer ml-4">
                 <Link
@@ -437,10 +437,7 @@ const Navbar = ({ size }) => {
                   <ul>
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
-                        <ul
-                          
-                          className="group/{jewellery}   w-full rounded-md p-2 flex "
-                        >
+                        <ul className="group/{jewellery}   w-full rounded-md p-2 flex ">
                           {data.name}
                           <span>
                             <FaCaretRight className="transition-all duration-200 mt-1  " />
