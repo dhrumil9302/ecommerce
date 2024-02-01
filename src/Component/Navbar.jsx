@@ -66,166 +66,8 @@ const DropdownLink = [
     link: "/#",
   },
 ];
-const Subtitle1 = [
-  {
-    id: 1,
-    name: "Engagement",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Classic",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Navratna",
-    link: "/#",
-  },
-  {
-    id: 4,
-    name: "Couple Brands",
-    link: "/#",
-  },
-  {
-    id: 5,
-    name: "Eternity",
-    link: "/#",
-  },
-  {
-    id: 6,
-    name: "Solitaire",
-    link: "/#",
-  },
-];
-const Subtitle2 = [
-  {
-    id: 1,
-    name: "Studs",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Navratna",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Jhumkha",
-    link: "/#",
-  },
-  {
-    id: 4,
-    name: "Hoops",
-    link: "/#",
-  },
-  {
-    id: 5,
-    name: "Solitraine",
-    link: "/#",
-  },
-];
-const Subtitle3 = [
-  {
-    id: 1,
-    name: "Collar",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Layered",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Choker",
-    link: "/#",
-  },
-  {
-    id: 4,
-    name: "Delicate",
-    link: "/#",
-  },
-  {
-    id: 5,
-    name: "Lariat",
-    link: "/#",
-  },
-  {
-    id: 6,
-    name: "Pandant Nacklace",
-    link: "/#",
-  },
-];
-const Subtitle4 = [
-  {
-    id: 1,
-    name: "Kada Bangles",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Delicate Bangles",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Broad Bangles",
-    link: "/#",
-  },
-  {
-    id: 4,
-    name: "Entrnity Bangles",
-    link: "/#",
-  },
-  {
-    id: 5,
-    name: "Chain Bracelets",
-    link: "/#",
-  },
-  {
-    id: 6,
-    name: "Flexi Bracelets",
-    link: "/#",
-  },
-  {
-    id: 7,
-    name: "Oval Bracelets",
-    link: "/#",
-  },
-  {
-    id: 8,
-    name: "Tennis Bracelets",
-    link: "/#",
-  },
-];
-const Subtitle5 = [
-  {
-    id: 1,
-    name: "Intial Pendents",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Solitaire Pendents ",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Casual Pendents",
-    link: "/#",
-  },
-  {
-    id: 4,
-    name: "Simple Chain",
-    link: "/#",
-  },
-];
-const Subtitle = [
-  {
-    id: Subtitle1,
-  },
-];
+
+
 
 const Navbar = ({ size }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -256,14 +98,7 @@ const Navbar = ({ size }) => {
                   placeholder="search"
                   className="hidden sm:block w-[5000px] h-6 mt-3 mr-1  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
                 />
-                {/* <a
-                  href="/gift"
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
-                >
-                  <span className="transition-all duration-200">
-                    <IoMdSearch className="size-3 mt-1" />
-                  </span>
-                </a> */}
+                
                 <a
                   href="/gift"
                   className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
@@ -309,14 +144,7 @@ const Navbar = ({ size }) => {
 
           <div className="block sm:hidden mb-2  ">
             <div className=" mx-4 flex justify-end">
-              {/* <a
-                    href="/Gift"
-                    className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
-                  >
-                    <span className="transition-all duration-200">
-                      <IoMdSearch className="size-3 mt-1 " />
-                    </span>
-                  </a> */}
+             
               <input
                 type="text"
                 placeholder="search"
@@ -380,39 +208,50 @@ const Navbar = ({ size }) => {
                           >
                             {data.name}
                           </Link>
-                          {/* <span>
-                            <FaCaretRight className="transition-all duration-200 mt-1 " />
-                          </span>
-
-                          <ul className="  z-[9999] w-full rounded-md p-2 hidden group-hover/{jewellery}:block hover:bg-primary/20">
-                            {Subtitle1.map((data) => (
-                              <li key={data.id}>
-                                <Link
-                                  to={data.link}
-                                  className=" w-full rounded-md p-2 flex hover:bg-primary/20"
-                                >
-                                  {data.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul> */}
                         </ul>
                       </li>
                     ))}
                   </ul>
                 </div>
               </li>
-
               {Menu1.map((data) => (
                 <li key={data.id}>
                   <Link
                     to={data.link}
-                    className="inline-block px-4 hover:text-orange-500 duration-200"
-                  >
+                    className="inline-block px-4 hover:text-orange-500 duration-200">
                     {data.name}
                   </Link>
                 </li>
               ))}
+               <li className="group relative cursor-pointer ml-2">
+                <a
+                  href="#"
+                  className="flex items-center gap-[2px] py-2  hover:text-orange-500 "
+                >
+                  Gold Rate
+                  <span>
+                    <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+                  </span>
+                </a>
+                <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md ">
+                <h3>TODAY's Gold Rate</h3>
+                <table>
+                <tr>
+                  <td>24 KT (1000)</td>
+                  <td>- 	₹ 6370/g</td>
+                </tr>
+                <tr>
+                <td>22 KT (916)</td>
+                  <td>- 	₹ 5815/g</td>
+                </tr>
+                <tr>
+                <td>18 KT (750)</td>
+                  <td>- 	₹ 5815/g</td>
+                </tr>
+                </table>
+                </div>
+              </li>
+              
             </ul>
           </div>
           <div>
@@ -432,7 +271,6 @@ const Navbar = ({ size }) => {
                     <FaCaretRight className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </Link>
-
                 <div className="  z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black ">
                   <ul>
                     {DropdownLink.map((data) => (
@@ -441,20 +279,7 @@ const Navbar = ({ size }) => {
                           {data.name}
                           <span>
                             <FaCaretRight className="transition-all duration-200 mt-1  " />
-                          </span>
-
-                          <ul className="  z-[9999] w-full rounded-md p-2 hidden group-hover/{jewellery}:block hover:bg-primary/20">
-                            {Subtitle1.map((data) => (
-                              <li key={data.id}>
-                                <Link
-                                  to={data.link}
-                                  className=" w-full rounded-md p-2 flex hover:bg-primary/20"
-                                >
-                                  {data.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
+                          </span>  
                         </ul>
                       </li>
                     ))}
@@ -471,7 +296,9 @@ const Navbar = ({ size }) => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            
+           
+              </ul>
           </div>
         </div>
       </div>

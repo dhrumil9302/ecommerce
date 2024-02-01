@@ -105,7 +105,7 @@ const Chain = ({ handleClick }) => {
          <div key={index} className="px-2 mx-auto font-serif ">
            <div className=" ">
              <div>
-             <Link to="/Productdetails">
+             <Link to="">
                <img
                  src={item.img}
                  alt=""

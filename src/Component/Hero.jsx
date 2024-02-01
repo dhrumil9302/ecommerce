@@ -273,12 +273,14 @@ const Hero = () => {
           137 showrooms spread across India and GCC
         </p>
       </div>
+      <Link to="/AboutUs">
       <button
-        onClick={() => alert("Cart not available yet")}
+       
         className="bg-gray-400  border-black px-2 py-[2px] lg:px-6 lg:py-[10px] rounded-full text-sxs lg:text-sm lg:mt-8 mt-4 ml-10 lg:ml-16"
       >
         Read More..
       </button>
+      </Link>
 
       <div className="flex items-center py-4 mt-10">
         <div className="flex-grow h-px bg-gray-400"></div>

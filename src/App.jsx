@@ -12,6 +12,7 @@ import Earrings from "./Component/Categories/Earrings";
 import Nacklace from "./Component/Categories/Nacklace";
 import Bangles from "./Component/Categories/Bangles$Bracelets";
 import Chain from "./Component/Categories/Chain";
+import AboutUs from "./routes/AboutUs";
 // import Wish from "./routes/Wish";
 
 
@@ -36,7 +37,7 @@ const App = () => {
       <Navbar size={cart.length} />
       <Routes>
         <Route path="/" element={<Home />} />
-        
+        <Route path="/AboutUs" element={<AboutUs/>}></Route>
         <Route path="/gift" element={<Gift cart={cart} setCart={setCart}/>} />
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
         <Route path="/form" element={<Form cart={cart} setCart={setCart} handleClick={handleClick}  />}></Route>
