@@ -14,6 +14,7 @@ export  const ProductData1 = [
     Title: "Nacklace",
     img: J1,
     Price: 94000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
@@ -21,6 +22,7 @@ export  const ProductData1 = [
     Title: "Braclate",
     img: J2,
     Price: 27000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
@@ -28,6 +30,7 @@ export  const ProductData1 = [
     Title: "Gold Ring",
     img: J3,
     Price: 17000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
@@ -35,11 +38,13 @@ export  const ProductData1 = [
     Title: "Earring",
     img: J4,
     Price: 18000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
     id: 5,
     Title: "Couple Ring",
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     img: J5,
     Price: 38000,
     amount: 1,
@@ -48,6 +53,7 @@ export  const ProductData1 = [
     id: 6,
     Title: "Chain-Pandent",
     Price: 35000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     img: J6,
     amount: 1,
   },
@@ -56,6 +62,7 @@ export  const ProductData1 = [
     Title: "Earrings",
     img: J7,
     Price: 14000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
@@ -63,6 +70,7 @@ export  const ProductData1 = [
     Title: "Simple Chain with Earrings",
     img: J8,
     Price: 17000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
   {
@@ -70,6 +78,7 @@ export  const ProductData1 = [
     Title: "Gold Bangles",
     img: J9,
     Price: 40000,
+    Description: "Add an opulent touch to your ensembles with this necklace set, crafted in 22 karat yellow gold, with white stones",
     amount: 1,
   },
 ];

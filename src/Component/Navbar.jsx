@@ -27,12 +27,6 @@ const Menu1 = [
     name: "Contact Us",
     link: "/Contact",
   },
-
-  {
-    id: 4,
-    name: "Offers",
-    link: "/",
-  },
 ];
 const DropdownLink = [
   {
@@ -236,6 +230,7 @@ const Navbar = ({ size }) => {
                 <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md ">
                 <h3>TODAY's Gold Rate</h3>
                 <table>
+                  <tbody>
                 <tr>
                   <td>24 KT (1000)</td>
                   <td>- 	₹ 6370/g</td>
@@ -248,6 +243,7 @@ const Navbar = ({ size }) => {
                 <td>18 KT (750)</td>
                   <td>- 	₹ 5815/g</td>
                 </tr>
+                </tbody>
                 </table>
                 </div>
               </li>
