@@ -61,8 +61,6 @@ const DropdownLink = [
   },
 ];
 
-
-
 const Navbar = ({ size }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -92,18 +90,39 @@ const Navbar = ({ size }) => {
                   placeholder="search"
                   className="hidden sm:block w-[5000px] h-6 mt-3 mr-1  text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
                 />
-                
-                <a
-                  href="/gift"
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
-                >
-                  <span className="transition-all duration-200">
-                    <IoPerson className="size-3 mt-1" />
-                  </span>
-                </a>
+
+                <div className="group relative cursor-pointer font-serif  ">
+                  <a>
+                    <span className=" bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block">
+                      <IoPerson className="transition-all duration-200 group-hover:rotate-0 size-3 mt-1" />
+                    </span>
+                  </a>
+                  <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md right-0 ">
+                    <h1 className="text-xl font-bold">Your Account</h1>
+                    <p className="text-sm">
+                      Track Your Orders, Manage Payment, Edit Profile And Much
+                      More..
+                    </p>
+                    <div className="grid gap-2 mt-3">
+                      <a
+                        href="Login"
+                        className="bg-blue-400 rounded-md text-center"
+                      >
+                        LOGIN
+                      </a>
+                      <a
+                        href="Signup"
+                        className="bg-blue-200 hover:bg-blue-400 rounded-md text-center"
+                      >
+                        SIGN UP
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 <a
                   href="/"
-                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block "
+                  className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full hidden sm:block"
                 >
                   <span className="transition-all duration-200">
                     <FaRegHeart className="size-3 mt-1" />
@@ -138,25 +157,46 @@ const Navbar = ({ size }) => {
 
           <div className="block sm:hidden mb-2  ">
             <div className=" mx-4 flex justify-end">
-             
               <input
                 type="text"
                 placeholder="search"
                 className="w-[500px] h-6 mt-3 mr-2 text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2  focus:outline-none focus:border-1"
               />
-              <a
-                href="/Gift"
-                className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  "
-              >
-                <span className="transition-all duration-200">
-                  <IoPerson className="size-3 mt-1" />
-                </span>
-              </a>
+
+              <div className="group relative cursor-pointer font-serif  bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full  ">
+                <a>
+                  <span >
+                    <IoPerson className="transition-all duration-200 group-hover:rotate-0 size-3 mt-1" />
+                  </span>
+                </a>
+                <div className=" absolute z-[9999] hidden group-hover:block w-[230px] rounded-md bg-white p-2 text-black shadow-md right-0 mt-3 ">
+                  <h1 className="text-xl font-bold">Your Account</h1>
+                  <p className="text-sm">
+                    Track Your Orders, Manage Payment, Edit Profile And Much
+                    More..
+                  </p>
+                  <div className="grid gap-2 mt-3">
+                    <a
+                      href="Login"
+                      className="bg-blue-400 rounded-md text-center"
+                    >
+                      LOGIN
+                    </a>
+                    <a
+                      href="Signup"
+                      className="bg-blue-200 hover:bg-blue-400 rounded-md text-center"
+                    >
+                      SIGN UP
+                    </a>
+                  </div>
+                </div>
+              </div>
+             
               <a
                 href="/"
                 className="bg-white border border-slate-500 transition-all duration-200 text-black  h-6 mt-3 m-0.5 px-1 md:px-2 rounded-full "
               >
-                <span className="transition-all duration-200">
+                <span className="">
                   <FaRegHeart className="size-3 mt-1" />
                 </span>
               </a>
@@ -195,7 +235,6 @@ const Navbar = ({ size }) => {
                     {DropdownLink.map((data) => (
                       <li key={data.id}>
                         <ul className="group/{jewellery}   w-full rounded-md p-2 flex hover:bg-primary/20">
-                      
                           <Link
                             to={data.link}
                             className=" w-full rounded-md p-2 flex "
@@ -212,12 +251,13 @@ const Navbar = ({ size }) => {
                 <li key={data.id}>
                   <Link
                     to={data.link}
-                    className="inline-block px-4 hover:text-orange-500 duration-200">
+                    className="inline-block px-4 hover:text-orange-500 duration-200"
+                  >
                     {data.name}
                   </Link>
                 </li>
               ))}
-               <li className="group relative cursor-pointer ml-2">
+              <li className="group relative cursor-pointer ml-2 ">
                 <a
                   href="#"
                   className="flex items-center gap-[2px] py-2  hover:text-orange-500 "
@@ -228,26 +268,25 @@ const Navbar = ({ size }) => {
                   </span>
                 </a>
                 <div className=" absolute z-[9999] hidden group-hover:block w-[280px] rounded-md bg-white p-2 text-black shadow-md ">
-                <h3>TODAY's Gold Rate</h3>
-                <table>
-                  <tbody>
-                <tr>
-                  <td>24 KT (1000)</td>
-                  <td>- 	₹ 6370/g</td>
-                </tr>
-                <tr>
-                <td>22 KT (916)</td>
-                  <td>- 	₹ 5815/g</td>
-                </tr>
-                <tr>
-                <td>18 KT (750)</td>
-                  <td>- 	₹ 5815/g</td>
-                </tr>
-                </tbody>
-                </table>
+                  <h3>TODAY's Gold Rate</h3>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>24 KT (1000)</td>
+                        <td>- ₹ 6370/g</td>
+                      </tr>
+                      <tr>
+                        <td>22 KT (916)</td>
+                        <td>- ₹ 5815/g</td>
+                      </tr>
+                      <tr>
+                        <td>18 KT (750)</td>
+                        <td>- ₹ 5815/g</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </li>
-              
             </ul>
           </div>
           <div>
@@ -275,7 +314,7 @@ const Navbar = ({ size }) => {
                           {data.name}
                           <span>
                             <FaCaretRight className="transition-all duration-200 mt-1  " />
-                          </span>  
+                          </span>
                         </ul>
                       </li>
                     ))}
@@ -292,9 +331,7 @@ const Navbar = ({ size }) => {
                   </Link>
                 </li>
               ))}
-            
-           
-              </ul>
+            </ul>
           </div>
         </div>
       </div>

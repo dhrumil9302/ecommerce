@@ -14,6 +14,8 @@ import Bangles from "./Component/Categories/Bangles$Bracelets";
 import Chain from "./Component/Categories/Chain";
 import AboutUs from "./routes/AboutUs";
 // import Wish from "./routes/Wish";
+import Login from "./Component/Login";
+import Signup from "./Component/Signup";
 
 
 const App = () => {
@@ -50,6 +52,9 @@ const App = () => {
         <Route path="/Categories/Bangles" element={<Bangles handleClick={handleClick} />}></Route>
         <Route path="/Categories/Chian" element={<Chain handleClick={handleClick} />}></Route>
         {/* <Route path="/wish" element={<Wish/>}></Route> */}
+        <Route path="/Productdtails" element={<Productdtails/>}></Route>
+        <Route path="/Login" element={<Login/>}></Route>
+        <Route path="/Signup" element={<Signup/>}></Route>
       </Routes>
     </div>
   );

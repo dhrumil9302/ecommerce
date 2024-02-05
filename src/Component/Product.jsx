@@ -90,12 +90,12 @@ const Product = ({ handleClick }) => {
                     <FaIndianRupeeSign className="mt-1" />
                     {item.Price}
                   </p>
-                 
+                 <Link to="/Productdtails">
                   <button
                     onClick={() => handleClick(item)}
                     className="bg-amber-600 w-32  border-black px-2  py-[1.px] rounded-full mt-1 flex " >
                     Add to Cart
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             </div>
