@@ -217,7 +217,7 @@ const Navbar = ({ size }) => {
           <div className="flex justify-center font-serif shadow-xl">
             <ul className="sm:flex items-center gap-4 hidden">
               <li className=" hover:text-orange-500 ">
-                <Link to="/">Home</Link>
+                <Link to="/Home">Home</Link>
               </li>
               <li className="group relative cursor-pointer ml-2">
                 <a

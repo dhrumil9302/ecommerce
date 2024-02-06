@@ -18,6 +18,7 @@ import R12 from "../../assets/Rings/Ring10.jpg";
 import R13 from "../../assets/Rings/Ring11.jpg";
 import R14 from "../../assets/Rings/Ring12.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
+import Navbar from '../Navbar';
 
 const ProductData1 = [
     {
@@ -130,7 +131,7 @@ const ProductData1 = [
 const Rings = ({ handleClick }) => {
 
     const [id,Title,Description,img,Price] = ProductData1
-
+    const [cart, setCart] = useState([]);
     const [detail,setDetail] = useState([]);
     const [close, setClose] = useState(false)
     const detailPage = (Product) =>
@@ -141,6 +142,7 @@ const Rings = ({ handleClick }) => {
 
   return (
     <>
+    <Navbar  size={cart.length} />
      {close ?
     <div >
       {

@@ -1,6 +1,7 @@
 import React,  { useState, useEffect } from 'react'
 
-function Wish({ cart, setCart }) {
+const Wish = ({ cart, setCart }) => {
+    const [cart, setCart] = useState([]);
     const handlePrice = () => {
         let ans = 0;
         cart.map((item) => (ans += item.amount * item.Price));
@@ -9,6 +10,7 @@ function Wish({ cart, setCart }) {
     
   return (
     <div>
+        <Navbar  size={cart.length} />
         <div className="text-center">
             <h2 className=" py-8 text-3xl font-serif">Wishlist</h2>
             {cart?.map((item) => (

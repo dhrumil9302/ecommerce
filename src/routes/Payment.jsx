@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import p1   from "../assets/cards.png";
 import { FaBagShopping } from "react-icons/fa6";
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
+import Navbar from '../Navbar';
 
 const Payment = ({cart, setCart, handleSubmit}) => {
     const [price, setPrice] = useState(0);
-
+    const [cart, setCart] = useState([]);
     const handlePrice = () => {
       let ans = 0;
       if (cart && Array.isArray(cart) && cart.length > 0) {
@@ -31,6 +32,7 @@ const Payment = ({cart, setCart, handleSubmit}) => {
     }
   return (
     <>
+     <Navbar  size={cart.length} />
       <div className='bg-slate-100 m-10 my-14 font-serif px-4 '>
       <div className='flex justify-between lg:mx-48 md:mx-20   flex-col lg:flex-row md:flex-row'>   
         <div className='my-10 xl:my-20 '>

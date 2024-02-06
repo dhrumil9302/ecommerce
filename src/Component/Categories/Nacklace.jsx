@@ -15,6 +15,7 @@ import N9 from "../../assets/Nacklace/Nc8.jpg";
 import N10 from "../../assets/Nacklace/Nc9.jpg";
 import N11 from "../../assets/Nacklace/Nc5.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
+import Navbar from '../Navbar';
 
 const ProductData1 = [
     {
@@ -100,7 +101,7 @@ const ProductData1 = [
   ];
 
 const Nacklace = ({ handleClick }) => {
-
+  const [cart, setCart] = useState([]);
     const [id,Title,Description,img,Price] = ProductData1
     const [detail,setDetail] = useState([]);
     const [close, setClose] = useState(false)
@@ -112,7 +113,9 @@ const Nacklace = ({ handleClick }) => {
 
 
   return (
-    <> {close ?
+    <> 
+     <Navbar  size={cart.length} />
+    {close ?
       <div >
         {
           detail.map((x) =>

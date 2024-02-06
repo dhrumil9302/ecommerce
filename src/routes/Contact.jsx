@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Footer from '../Component/Footer';
 
+import Navbar from '../Component/Navbar';
+
+
 const Contact = () => {
+  const [cart, setCart] = useState([]);
   return (
     <div>
+       <Navbar  size={cart.length} />
          <div  className='px-4 p-16 xl:p-20 '>
         <div className="bg-gray-200 rounded-xl  lg:mx-48 md:mx-36 xl:mx-48 ">
             <h1 className='font-serif text-center p-4 md:text-xl xl:text-3xl xl:p-8'> Send a message to us!</h1>

@@ -11,7 +11,7 @@ import Br5 from "../../assets/Braclete/Br5.jpg";
 import Br6 from "../../assets/Braclete/Br3.jpg";
 import Br7 from "../../assets/Braclete/Br7.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
-
+import Navbar from '../Navbar';
 
 
 const ProductData1 = [
@@ -70,7 +70,7 @@ const ProductData1 = [
 const Bangles = ({ handleClick }) => {
 
     const [id,Title,Description,img,Price] = ProductData1
-
+    const [cart, setCart] = useState([]);
     const [detail,setDetail] = useState([]);
     const [close, setClose] = useState(false)
     const detailPage = (Product) =>
@@ -80,7 +80,9 @@ const Bangles = ({ handleClick }) => {
     }
 
   return (
-    <> {close ?
+    <>
+     <Navbar  size={cart.length} />
+      {close ?
       <div >
         {
           detail.map((x) =>

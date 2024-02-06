@@ -14,8 +14,7 @@ import Ch8 from "../../assets/Chain/c1.jpg";
 import Ch9 from "../../assets/Chain/c2.jpg";
 import Ch10 from "../../assets/Chain/c3.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
-
-
+import Navbar from '../Navbar';
 
 const ProductData1 = [
     {
@@ -94,7 +93,7 @@ const ProductData1 = [
   ];
   
 const Chain = ({ handleClick }) => {
-
+  const [cart, setCart] = useState([]);
     const [id,Title,Description,img,Price] = ProductData1
     const [detail,setDetail] = useState([]);
     const [close, setClose] = useState(false)
@@ -107,6 +106,7 @@ const Chain = ({ handleClick }) => {
 
   return (
     <>
+    <Navbar  size={cart.length} />
     {close ?
     <div >
       {

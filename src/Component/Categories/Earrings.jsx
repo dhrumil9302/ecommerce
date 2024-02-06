@@ -13,7 +13,7 @@ import Er7 from "../../assets/Earrings/Er7.jpg";
 import Er8 from "../../assets/Earrings/Er8.jpg";
 import Er9 from "../../assets/Earrings/Er9.jpg";
 import { IoIosCloseCircle } from "react-icons/io";
-
+import Navbar from '../Navbar';
 
 const ProductData1 = [
     {
@@ -83,7 +83,7 @@ const ProductData1 = [
   ];
 
 const Earrings = ({ handleClick }) => {
-
+  const [cart, setCart] = useState([]);
     const [id,Title,Descriptionimg,Price] = ProductData1
     const [detail,setDetail] = useState([]);
     const [close, setClose] = useState(false)
@@ -96,6 +96,7 @@ const Earrings = ({ handleClick }) => {
 
   return (
     <>
+       <Navbar  size={cart.length} />
     {close ?
       <div >
         {

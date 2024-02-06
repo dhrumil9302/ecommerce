@@ -36,15 +36,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar size={cart.length} />
+      {/* <Navbar size={cart.length} /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs/>}></Route>
         <Route path="/gift" element={<Gift cart={cart} setCart={setCart}/>} />
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
         <Route path="/form" element={<Form cart={cart} setCart={setCart} handleClick={handleClick}  />}></Route>
         {/* <Route path="/payment" element={<Payment cart={cart} setCart={setCart} handleClick={handleClick} />}></Route> */}
-        <Route path="/Productdetails" element={<Productdtails/>} ></Route>
+        <Route path="/Productdtails" element={<Productdtails/>} ></Route>
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/Categories/Rings" element={<Rings handleClick={handleClick} />}></Route>
         <Route path="/Categories/Earrings" element={<Earrings handleClick={handleClick} />}></Route>
@@ -53,7 +53,7 @@ const App = () => {
         <Route path="/Categories/Chian" element={<Chain handleClick={handleClick} />}></Route>
         {/* <Route path="/wish" element={<Wish/>}></Route> */}
         <Route path="/Productdtails" element={<Productdtails/>}></Route>
-        <Route path="/Login" element={<Login/>}></Route>
+        <Route path="/" element={<Login/>}></Route>
         <Route path="/Signup" element={<Signup/>}></Route>
       </Routes>
     </div>

@@ -3,7 +3,7 @@ import { FaIndianRupeeSign } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import {ProductData1} from "./data";
 import { Link } from "react-router-dom";
-import { IoIosCloseCircle } from "react-icons/io";
+// import { IoIosCloseCircle } from "react-icons/io";
 
 const Product = ({ handleClick }) => {
 
@@ -19,7 +19,7 @@ const Product = ({ handleClick }) => {
 
   return (
     <>
-    
+{/*     
     {close ?
     <div >
       {
@@ -67,7 +67,7 @@ const Product = ({ handleClick }) => {
         })
       }
     </div>
-   :null } 
+   :null }  */}
       
 
     <div className="m-12 relative"> 
@@ -76,12 +76,12 @@ const Product = ({ handleClick }) => {
           <div key={index} className="px-2 mx-auto font-serif ">
             <div className=" ">
               <div  >
-              
-                <img onClick={() => detailPage(item)}
+              <Link to="/Productdetails">
+                <img 
                   src={item.img}
                   alt=""
                   className="h-[15rem]  w-[15rem] xl:w-[20rem]  xl:h-[20rem] 2xl:w-[22rem] rounded-lg shadow-xl"></img>
-                        
+                   </Link>     
                 <div className="mb-3 2xl:mt-4">
                   <FaRegHeart className="m-1 xl:mt-3 " />
                   <h3>{item.Title}</h3>

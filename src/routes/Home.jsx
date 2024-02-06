@@ -5,10 +5,11 @@ import Footer from "../Component/Footer";
 
 
 const Home = () => {
+  const [cart, setCart] = useState([]);
 
   return (
     <div>
-      {/* <Navbar size={cart.length} /> */}
+      <Navbar size={cart.length} />
       <Hero />
       <Footer />
     </div>

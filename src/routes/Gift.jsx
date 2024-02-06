@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { GiFleurDeLys } from "react-icons/gi";
-
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import Navbar from '../Component/Navbar';
 
 const Gift = ({ cart, setCart }) => {
   const [price, setPrice] = useState(0);
-
+// const [cart, setCart] = useState([]);
   const handlePrice = () => {
     let ans = 0;
     cart.map((item) => (ans += item.amount * item.Price));
@@ -38,6 +38,7 @@ const Gift = ({ cart, setCart }) => {
 
   return (
     <>
+    <Navbar  size={cart.length} />
       <div className="flex  ">
         <div className=" w-full md:w-10/12 lg:w-10/12 lg:mx-20 lg:my-10 md:mx-20 md:my-10  ">
           <div className="text-center">
