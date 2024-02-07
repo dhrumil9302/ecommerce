@@ -10,7 +10,7 @@ const Signup = () => {
       <form className="mx-10" action="/Home">
       <div className="flex items-center border-b border-black py-2 text-black my-5">
           <input
-            className="appearance-none bg-transparent border-none w-full text-slate-900 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
+            className="appearance-none bg-transparent border-none w-full placeholder:text-blue-950 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
             name="Name"
             type="Name"
             placeholder="Name*"
@@ -21,7 +21,7 @@ const Signup = () => {
         </div>
         <div className="flex items-center border-b border-black py-2 text-black my-5">
           <input
-            className="appearance-none bg-transparent border-none w-full text-slate-900 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
+            className="appearance-none bg-transparent border-none w-full placeholder:text-blue-950 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
             name="email"
             type="email"
             placeholder="Email*"
@@ -32,7 +32,7 @@ const Signup = () => {
         </div>
         <div className="flex items-center border-b border-black py-2 text-black">
           <input
-            className=" appearance-none bg-transparent border-none w-full text-slate-900 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
+            className=" appearance-none bg-transparent border-none w-full placeholder:text-blue-950 xl:text-2xl mr-3 py-1 px-2 leading-tight focus:outline-none"
             name="password"
             type="password"
             placeholder="Password*"

@@ -5,7 +5,7 @@ import {ProductData1} from "./data";
 import { Link } from "react-router-dom";
 // import { IoIosCloseCircle } from "react-icons/io";
 
-const Product = ({ handleClick }) => {
+const Product = ({ item, handleClick }) => {
 
   const [id,Title,Description,img,Price] = ProductData1
 
@@ -16,7 +16,13 @@ const Product = ({ handleClick }) => {
     setDetail([{...Product}])
     setClose(true)
   }
-
+  const filterResult = (catItem) => {
+    const result = Data.filter((curData) => {
+      return curData.category === catItem;
+    });
+    setData(result);
+  };
+ 
   return (
     <>
 {/*     
@@ -72,16 +78,21 @@ const Product = ({ handleClick }) => {
 
     <div className="m-12 relative"> 
       <div className="  my-4 grid grid-cols-1 sm:grid-cols-3 ">
-        {ProductData1.map((item, index) => (
-          <div key={index} className="px-2 mx-auto font-serif ">
-            <div className=" ">
+        {ProductData1.map((item) => (
+          <div key={item.id} className="px-2 mx-auto font-serif ">
+             <Link
+              key={item.id}
+              to={`/product-details/${item.id}`}
+              className=" xl:w-[300px] lg:w-[230px] md:w-[190px] xs:w-[193px] xxs:w-[183px] shadow-xl "
+            >
+            
               <div  >
-              <Link to="/Productdetails">
+             
                 <img 
                   src={item.img}
                   alt=""
                   className="h-[15rem]  w-[15rem] xl:w-[20rem]  xl:h-[20rem] 2xl:w-[22rem] rounded-lg shadow-xl"></img>
-                   </Link>     
+                   
                 <div className="mb-3 2xl:mt-4">
                   <FaRegHeart className="m-1 xl:mt-3 " />
                   <h3>{item.Title}</h3>
@@ -90,16 +101,18 @@ const Product = ({ handleClick }) => {
                     <FaIndianRupeeSign className="mt-1" />
                     {item.Price}
                   </p>
-                 <Link to="/Productdtails">
+                 
                   <button
                     onClick={() => handleClick(item)}
                     className="bg-amber-600 w-32  border-black px-2  py-[1.px] rounded-full mt-1 flex " >
                     Add to Cart
-                  </button></Link>
+                  </button>
                 </div>
+                
               </div>
+              </Link>
             </div>
-          </div>
+          
         ))}
       </div>
 

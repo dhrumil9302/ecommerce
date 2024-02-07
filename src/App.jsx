@@ -6,7 +6,7 @@ import Shop from "./routes/Shop";
 import Navbar from "./Component/Navbar";
 import Form  from "./routes/Form";
 import Contact from "./routes/Contact";
-import Productdtails from "./Component/Productdtails";
+import ProductDetails from "./Component/ProductDetails";
 import Rings from "./Component/Categories/Rings";
 import Earrings from "./Component/Categories/Earrings";
 import Nacklace from "./Component/Categories/Nacklace";
@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/product" element={<Shop handleClick={handleClick} />} />
         <Route path="/form" element={<Form cart={cart} setCart={setCart} handleClick={handleClick}  />}></Route>
         {/* <Route path="/payment" element={<Payment cart={cart} setCart={setCart} handleClick={handleClick} />}></Route> */}
-        <Route path="/Productdtails" element={<Productdtails/>} ></Route>
+        {/* <Route path="/Productdtails" element={<Productdtails/>} ></Route> */}
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/Categories/Rings" element={<Rings handleClick={handleClick} />}></Route>
         <Route path="/Categories/Earrings" element={<Earrings handleClick={handleClick} />}></Route>
@@ -52,7 +52,7 @@ const App = () => {
         <Route path="/Categories/Bangles" element={<Bangles handleClick={handleClick} />}></Route>
         <Route path="/Categories/Chian" element={<Chain handleClick={handleClick} />}></Route>
         {/* <Route path="/wish" element={<Wish/>}></Route> */}
-        <Route path="/Productdtails" element={<Productdtails/>}></Route>
+        {/* <Route path="/product-details/:productId" element={<ProductDetails handleClick={handleClick}/>}></Route> */}
         <Route path="/" element={<Login/>}></Route>
         <Route path="/Signup" element={<Signup/>}></Route>
       </Routes>
